@@ -9,7 +9,8 @@
 
 .level {
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    overflow:auto; }
     .level code {
       border-radius: 4px; }
     .level img {
@@ -158,6 +159,13 @@
     .image.is-64x64 {
       height: 64px;
       width: 64px; }
+    .image.is-72x72 {
+        height: 72px;
+        width: 72px; }
+
+    .image.is-88x88 {
+      height: 88px;
+      width: 88px; }
     .image.is-96x96 {
       height: 96px;
       width: 96px; }
