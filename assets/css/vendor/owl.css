@@ -123,6 +123,8 @@
 
 .owl.owl-loaded {
   display: block;
+  box-shadow: 8px 8px 20px 0 hsla(0,0%,40%,.1);
+  padding: 0.25em 0.25em 1em 0.25em;
 }
 
 .owl.owl-loading {
