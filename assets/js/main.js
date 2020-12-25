@@ -150,7 +150,7 @@ Widgets.svbtleFeeds = {
                 var post = listPosts[i];
                 console.log(post);
                 var today = new Date()
-                var pubDate = new Date(post.pubDate);
+                var pubDate = new Date(post.pubDate.replace(/-/g, "/"));
                 var latest = false;
                 if(today.getFullYear() - pubDate.getFullYear() < 5){
                     latest = true
