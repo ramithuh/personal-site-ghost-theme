@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+
+
+#medium-articles .heading .text {
+  text-align: center;
+  font-size: 1.9em;
+  position: relative;
+  padding-bottom: 3%;
+}
+#medium-articles .heading .text::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 150px;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+#medium-articles * {
+    font: normal 16px 'Mukta', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    color: var(--darker-gray-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    outline: 0;
+    
+}
+
+#medium-articles body {
+  padding: 30px;
+  background: var(--white-color);
+}
+
+#medium-articles ul {
+  text-align: center;
+  font-size: 0;
+}
+    #medium-articles li {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    margin: 0 15px 30px;
+    border-radius: 3px;
+    background: var(--white-color);
+    box-shadow: 0 28px 29px rgba(102, 102, 102, 0.1);
+    max-height: 320px;
+    min-height: 320px;
+  }
+  #medium-articles .post-image {
+      height: 170px;
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 1px solid rgba(0,0,0,.0785);
+    }
+    
+    #medium-articles .post-content {
+      padding: 20px;
+    }
+    #medium-articles h1 {
+        font: 600 18px/22px 'Mukta';
+        /* letter-spacing: -0.6px; */
+        min-height: 72px;
+      }
+      
+      #medium-articles span {
+        font: 14px/14px 'Mukta';
+        /* letter-spacing: -.6px; */
+        display: block;
+        padding: 9px 0 3px;
+      }
+ 

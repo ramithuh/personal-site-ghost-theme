@@ -1,0 +1,20 @@
+<div class="cover container">
+    <div class="cover-content">
+            <div class="cover-icon">
+                <img class="cover-icon-image" src="{{asset 'images/ramith.jpeg'}}" alt="{{@site.title}}">
+            </div>
+
+        {{#if @site.description}}
+            <div class="cover-description">{{@site.description}}</div>
+        {{/if}}
+
+        {{#if @labs.members}}
+            {{#unless @member}}
+                <div class="cover-cta">
+                    <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
+                    <button class="button button-secondary members-login" data-portal="signin">Login</button>
+                </div>
+            {{/unless}}
+        {{/if}}
+    </div>
+</div>
