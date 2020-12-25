@@ -1,21 +1,79 @@
 <div class="cover container">
     <div class="rcover-content">
         <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-4">
             <div class="cover-icon">
                 <img class="cover-icon-image" src="{{asset 'images/ramith.jpeg'}}" alt="{{@site.title}}">
             </div>
         </div>
-        <div class="col-sm-10">
+        <div class="col-sm-8">
             {{#if @site.description}}
-            <div class="cover-description"><h3 >Hi there! I'm Ramith</h3>{{@site.description}}</div>
+            <div class="cover-description"><h3 >Hey! I'm Ramith 😃</h3>
+            <p>{{@site.description}}</p>
+            <p>This is my experimental version of the new personal website.
+              I needed a space to centralize the content I post through various blogging platforms such as medium, svbtle and my own <a href="https://blog.ramith.fyi">blog</a>.
+              This website accomplishes just that!
+            </p>
+            
+            </div>
             {{/if}}
-            <br>
             <hr>
             <br>
             <div class="container">
-            <div class="org-text">
-            <p align="left"><u>Here are some organizations I am/was affiliated with,</u></p></div>
+            <!--<div class="org-text">
+            <p align="left"><u>Here are some organizations I am/was affiliated with,</u></p></div>-->
+
+        </div>
+        
+            <!--
+            <br>
+            <div class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">Signal Procesing Society
+                          <br>
+                          Sep 2020 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://edu.ieee.org/lk-uomsps/">
+                        <img src="/assets/images/orgs/sps.png">
+                      </a>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">thAITeam
+                          <br>
+                          Sep 2020 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://edu.ieee.org/lk-uomsps/">
+                        <img src="/assets/images/orgs/0xAIT.png">
+                      </a>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+
+            
+
+        </div>
+        </div>
+
+
+        {{#if @labs.members}}
+            {{#unless @member}}
+                <div class="cover-cta">
+                    <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
+                    <button class="button button-secondary members-login" data-portal="signin">Login</button>
+                </div>
+            {{/unless}}
+        {{/if}}
+    </div>
+    
+</div>
+
+        <section class="org-wrapper">
+            <div class="container large">
             <div class="level">
                 <div class="level-item has-text-centered">
                     <div>
@@ -50,7 +108,6 @@
                       </a>
                     </div>
                 </div>
-
                 <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2">CSIRO | Data61
@@ -63,57 +120,16 @@
                 </div>
                 <div class="level-item has-text-centered">
                     <div>
-                      <p class="heading pb-2">Sustainable <br>Education <br>Foundation
+                      <p class="heading pb-2">Sustainable Education Foundation
                           <br>
                           Sep 2020 - Present
                       </p>
-                      <a class="image is-64x64 text-decoration-none" target="_blank" href="https://www.sefglobal.org/">
+                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://www.sefglobal.org/">
                         <img src="/assets/images/orgs/sef.png">
                       </a>
                     </div>
                 </div>
             </div>
-            <!--
-            <br>
-            <div class="level">
-                <div class="level-item has-text-centered">
-                    <div>
-                      <p class="heading pb-2">Signal Procesing Society
-                          <br>
-                          Sep 2020 - Present
-                      </p>
-                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://edu.ieee.org/lk-uomsps/">
-                        <img src="/assets/images/orgs/sps.png">
-                      </a>
-                    </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                      <p class="heading pb-2">thAITeam
-                          <br>
-                          Sep 2020 - Present
-                      </p>
-                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://edu.ieee.org/lk-uomsps/">
-                        <img src="/assets/images/orgs/0xAIT.png">
-                      </a>
-                    </div>
-                </div>
-            </div>
-            -->
-            
 
-            
             </div>
-        </div>
-        </div>
-        {{#if @labs.members}}
-            {{#unless @member}}
-                <div class="cover-cta">
-                    <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
-                    <button class="button button-secondary members-login" data-portal="signin">Login</button>
-                </div>
-            {{/unless}}
-        {{/if}}
-    </div>
-    
-</div>
+        </section>
