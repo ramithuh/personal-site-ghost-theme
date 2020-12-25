@@ -1,3 +1,7 @@
+.top-bar {
+    border-top: var(--theme-topbar-border-top-size, 3px) solid rgb(17,17,17);
+}
+
 .sticky {
     position: fixed;
     right: 0;
@@ -8,7 +12,7 @@
     align-items: center;
     padding: 0 2rem;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     transition: transform 0.3s var(--animation-base);
     transform: translateY(-52px);
     backdrop-filter: blur(4px);
@@ -23,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.85);
     transition: transform 0.3s var(--animation-base);
     transform: translateY(-52px);
     backdrop-filter: blur(8px);
