@@ -41,6 +41,8 @@
         <div class="site-content">
             {{{body}}}
         </div>
+        {{#is "post"}}
+        {{else}}
         <br>
         <hr>
         <br>
@@ -73,7 +75,7 @@
             })
             </script>
         </div>
-
+        {{/is}}
 
         {{> footer}}
         {{> modal}}

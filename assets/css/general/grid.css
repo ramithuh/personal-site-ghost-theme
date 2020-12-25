@@ -7,8 +7,11 @@
     width: 100%;
 }
 
+.content-area-post{
+    margin-top:5.5rem;
+}
 .content-area{
-    margin-top:12.5rem;
+    margin-top:11.5rem;
 }
 .container.medium {
     max-width: calc(750px + 8vw);
