@@ -1,13 +1,80 @@
 <div class="cover container">
-    <div class="cover-content">
+    <div class="rcover-content">
+        <div class="row">
+        <div class="col-md-2">
             <div class="cover-icon">
                 <img class="cover-icon-image" src="{{asset 'images/ramith.jpeg'}}" alt="{{@site.title}}">
             </div>
+        </div>
+        <div class="col-sm-10">
+            {{#if @site.description}}
+                <div class="cover-description hidden-xs hidden-sm">{{@site.description}}</div>
+            {{/if}}
+            <br>
+            <hr>
+            <br>
+            <div class="container">
+            <div class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">
+                        University of Moratuwa<br>
+                        2017 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" href="https://uom.lk/">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png">
+                      </a>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">
+                        Rotaract Mora<br>
+                        Aug 2019 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" href="https://rotaractmora.org/">
+                        <img src="/assets/images/orgs/rotaractmora.png">
+                      </a>
+                    </div>
+                </div>
 
-        {{#if @site.description}}
-            <div class="cover-description">{{@site.description}}</div>
-        {{/if}}
-
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">CSIRO | Data61
+                          <br>Oct 2020 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" href="https://research.csiro.au/robotics/">
+                        <img src="/assets/images/orgs/csiro.png">
+                      </a>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">Sustainable <br>Education <br>Foundation
+                          <br>
+                          Sep 2020 - Present
+                      </p>
+                      <a class="image is-64x64 text-decoration-none" href="https://www.sefglobal.org/">
+                        <img src="/assets/images/orgs/sef.png">
+                      </a>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">Signal Procesing Society
+                          <br>
+                          Sep 2020 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" href="https://edu.ieee.org/lk-uomsps/">
+                        <img src="/assets/images/orgs/sps.png">
+                      </a>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        </div>
         {{#if @labs.members}}
             {{#unless @member}}
                 <div class="cover-cta">
@@ -17,4 +84,5 @@
             {{/unless}}
         {{/if}}
     </div>
+    
 </div>
