@@ -37,6 +37,15 @@
     font-weight: 800;
     white-space: nowrap;
 }
+.news-feed-calendar {
+    display: flex;
+    margin-right: 1.5rem;
+    min-width: 115px;
+    color: var(--brand-color);
+    font-size: 1.1rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
 
 .feed-calendar-month {
     margin-right: 0.4rem;
@@ -52,6 +61,14 @@
     font-weight: 400;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.news-feed-title {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: 570;
 }
 
 .feed-right {
