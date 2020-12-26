@@ -36,6 +36,19 @@
         {{> header}}
         {{#is "home"}}
             {{> cover}}
+            <br>
+            <div class="content-area-feed">
+                <main class="site-main">
+                    <div class="post-news-feed container medium">
+                    <h2>News</h2>
+                    {{#get "posts" limit="7"  filter="tag:news"}}
+                    {{#foreach posts visibility="all"}}
+                        {{> "newsloop"}}
+                    {{/foreach}}
+                    {{/get}}
+                    </div>
+                </main>
+            </div>
             {{> featured}}
         {{/is}}
         <div class="site-content">

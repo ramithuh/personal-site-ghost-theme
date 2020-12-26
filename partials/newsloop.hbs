@@ -1,0 +1,14 @@
+<article class="feed {{post_class}}">
+    <div class="news-feed-calendar">
+        <div class="feed-calendar-month">
+            {{date published_at format="YYYY MMMM"}}
+        </div>
+    </div>
+    <h5 class="news-feed-title">{{title}}</h5>
+    <svg class="icon feed-icon">
+        <use xlink:href="#chevron-right"></use>
+    </svg>
+    {{#if reading_time}}
+    <a class="u-permalink" href="{{url}}" aria-label="{{title}}"></a>
+    {{/if}}
+</article>
