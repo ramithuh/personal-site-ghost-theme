@@ -633,23 +633,26 @@ function theme() {
     var toggle = $('.js-theme');
     var toggleText = toggle.find('.theme-text');
 
+    if (window.matchMedia) {
+        // Check if the dark-mode Media-Query matches
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+          dark();
+        } else {
+          light();
+        }
+      } else {
+        // Default (when Media-Queries are not supported)
+        light();
+    }
+
     function system() {
         html.removeClass(['theme-dark', 'theme-light']);
         localStorage.removeItem('dawn_theme');
         toggleText.text(toggle.attr('data-system'));
-        if (window.matchMedia) {
-            // Check if the dark-mode Media-Query matches
-            if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-              // Dark
-              dark();
-            } else {
-              // Light
-              light();
-            }
-          } else {
-            // Default (when Media-Queries are not supported)
-            light();
-          }
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // dark mode
+            dark();
+        }
     }
 
     function dark() {
