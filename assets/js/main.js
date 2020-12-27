@@ -637,25 +637,44 @@ function theme() {
         html.removeClass(['theme-dark', 'theme-light']);
         localStorage.removeItem('dawn_theme');
         toggleText.text(toggle.attr('data-system'));
+        if (window.matchMedia) {
+            // Check if the dark-mode Media-Query matches
+            if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+              // Dark
+              dark();
+            } else {
+              // Light
+              light();
+            }
+          } else {
+            // Default (when Media-Queries are not supported)
+            light();
+          }
     }
 
     function dark() {
         html.removeClass('theme-light').addClass('theme-dark');
         localStorage.setItem('dawn_theme', 'dark');
         toggleText.text(toggle.attr('data-dark'));
+        $("#0xAIT").attr("src","/assets/images/orgs/0xAIT_light.png");
+        $("#CSIRO").attr("src","/assets/images/orgs/csiro_light.png");
+        $("#YAALA").attr("src","/assets/images/orgs/yaalalabs_light.png");
     }
 
     function light() {
         html.removeClass('theme-dark').addClass('theme-light');
         localStorage.setItem('dawn_theme', 'light');
         toggleText.text(toggle.attr('data-light'));
+        $("#0xAIT").attr("src","/assets/images/orgs/0xAIT.png");
+        $("#CSIRO").attr("src","/assets/images/orgs/csiro.png");
+        $("#YAALA").attr("src","/assets/images/orgs/yaalalabs.png");
     }
 
     switch (localStorage.getItem('dawn_theme')) {
         case 'dark':
             dark();
             break;
-        case 'light':
+        case 'light':           
             light();
             break;
         default:

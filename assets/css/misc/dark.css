@@ -1,8 +1,9 @@
 .theme-dark:root {
     --primary-text-color: #e2e2e2;
+    --brand-color:#14b2fa ;
     --secondary-text-color: #868686;
     --white-color: #282c35;
-    --lighter-gray-color: rgb(17,17,17);
+    --lighter-gray-color: rgb(22,22,22); 
     --light-gray-color: #3b3e46;
     --mid-gray-color: #666;
     --dark-gray-color: #e6e6e6;
@@ -23,7 +24,10 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 .theme-dark .sheader {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(17, 17, 17, 0.85);
+}
+.theme-dark .rheader {
+    background-color: rgba(17, 17, 17, 0.85);
 }
 
 .theme-dark .form-button,
@@ -43,8 +47,20 @@
     color: var(--twitter-color);
 }
 
+.theme-dark .logo-text {
+    background: #267cee;
+    background: -moz-linear-gradient(-455deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #267cee), color-stop(0%, #267cee), color-stop(100%, #14b2fa));
+    background: -webkit-linear-gradient(-45deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+    background: -o-linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+    background: -ms-linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+    background: linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+
+}
+
 @media (prefers-color-scheme: dark) {
     html:not(.theme-light):root {
+        --brand-color:#14b2fa ;
         --primary-text-color: #e2e2e2;
         --secondary-text-color: #868686;
         --white-color: #282c35;
@@ -68,6 +84,23 @@
     html:not(.theme-light) .sticky {
         background-color: rgba(0, 0, 0, 0.6);
     }
+    html:not(.theme-light) .sheader {
+        background-color: rgba(17,17,17, 0.85);
+    }
+    html:not(.theme-light) .rheader {
+        background-color: rgba(17,17,17, 0.85);
+    }
+    
+    html:not(.theme-light) .logo-text {
+        background: #267cee;
+        background: -moz-linear-gradient(-455deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, #267cee), color-stop(0%, #267cee), color-stop(100%, #14b2fa));
+        background: -webkit-linear-gradient(-45deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+        background: -o-linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+        background: -ms-linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+        background: linear-gradient(135deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
+    }
+
 
     html:not(.theme-light) .form-button,
     html:not(.theme-light) .pswp__counter {
