@@ -192,4 +192,5 @@
             text-align: center !important; }
 
     .pb-2 {
-        padding-bottom: 0rem !important; }
+        padding-bottom: 0rem !important; 
+        text-shadow: 3px 3px 20px hsl(0deg 0% 40% / 50%);}
