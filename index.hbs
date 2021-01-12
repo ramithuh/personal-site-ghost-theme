@@ -3,7 +3,7 @@
 <div class="content-area-feed">
     <main class="site-main">
         <div class="post-feed container medium">
-                {{#foreach posts visibility="all"}}
+                {{#foreach posts}}
                 {{^has tag="news"}}
                     {{> "loop"}}
                 {{/has}}
