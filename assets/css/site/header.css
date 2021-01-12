@@ -35,13 +35,13 @@
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
     background-clip: text !important;
-    background: #0147af;
-    background: -moz-linear-gradient(-455deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, #0e0474), color-stop(0%, #0147af), color-stop(100%, #14b2fa));
-    background: -webkit-linear-gradient(-45deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
-    background: -o-linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
-    background: -ms-linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
-    background: linear-gradient(135deg, #0e0474 0%, #0147af 30%, #14b2fa 100%);
+    background: #3b48f6;
+    background: -moz-linear-gradient(-455deg, #3b48f6 0%, #3b48f6 30%, #14b2fa 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #3b48f6), color-stop(0%, #3b48f6), color-stop(100%, #14b2fa));
+    background: -webkit-linear-gradient(-45deg, #3b48f6 0%, #3b48f6 30%, #14b2fa 100%);
+    background: -o-linear-gradient(135deg, #3b48f6 0%, #3b48f6 30%, #14b2fa 100%);
+    background: -ms-linear-gradient(135deg, #3b48f6 0%, #3b48f6 30%, #14b2fa 100%);
+    background: linear-gradient(135deg, #3b48f6 0%, #3b48f6 30%, #14b2fa 100%);
 }
 
 .logo-image {
