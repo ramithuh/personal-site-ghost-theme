@@ -53,3 +53,166 @@
         margin-top: 3rem;
     }
 }
+body.home .container-home {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 760px;
+  }
+  @media (max-width: 760px) {
+	body.home .container-home {
+	  width: 94%;
+	}
+  }
+  body.home .container-home.container-science {
+	margin-top: 10px;
+	margin-bottom: 70px;
+  }
+
+body.home .section-science {
+	text-align: center;
+	
+  }
+  body.home .section-science .smallcaps {
+	color: #5B5D7E;
+  }
+  body.home .section-science .smallcaps img {
+	margin-right: 8px;
+	width: 18px;
+	vertical-align: text-bottom;
+  }
+  body.home .section-science .title {
+	font-size: 21px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	margin-top: 10px;
+	margin-bottom: 28px;
+  }
+  body.home .section-science .subtitle {
+	font-size: 17px;
+	max-width: 400px;
+	margin: auto;
+	margin-bottom: 62px;
+  }
+  body.home .section-science .row {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-bottom: 58px;
+  }
+  body.home .section-science .row .cover-details {
+	width: 230px;
+	margin-top: 28px;
+	text-align: left;
+	hyphens: auto;
+  }
+  body.home .section-science .row .cover-details a {
+	color: inherit;
+	text-decoration: underline;
+  }
+  body.home .section-science .row .cover-details .details {
+	font-size: 15px;
+  }
+  body.home .cover-cell {
+	background-color: turquoise;
+	border-radius: 3px;
+	box-shadow: 0 10px 25px 0 rgba(50, 94, 128, 0.2);
+	text-align: left;
+	position: relative;
+	/**
+		   * Sizes
+		   */
+	/**
+		   * Specialized versions
+		   */
+  }
+  body.home .cover-cell .cover-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 18px 26px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+  }
+  body.home .cover-cell .cover-inner .cover-title {
+	font-size: 27px;
+	font-weight: 600;
+	line-height: initial;
+	margin-bottom: 5px;
+  }
+  body.home .cover-cell .cover-inner .cover-title.large {
+	font-size: 27px;
+	margin-top: 10px;
+	margin-bottom: 0;
+  }
+  body.home .cover-cell .cover-inner .cover-author {
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+  }
+  body.home .cover-cell .cover-inner .cover-subtitle {
+	font-size: 17px;
+  }
+  body.home .cover-cell .cover-inner .cover-subtitle.small {
+	font-size: 14px;
+  }
+  @media (max-width: 560px) {
+	body.home .cover-cell .cover-inner .cover-subtitle.small {
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	}
+  }
+  body.home .cover-cell .cover-inner .cover-bottom {
+	margin-top: auto;
+	margin-left:auto;
+  }
+  body.home .cover-cell .cover-inner img {
+	display: block;
+	margin: 0 auto;
+  }
+  body.home .cover-cell.cover-standard {
+	width: 230px;
+	height: 150px;
+  }
+  body.home .cover-cell.cover-fat {
+	width: 100%;
+	max-width: 510px;
+	min-height: 158px;
+  }
+  body.home .cover-cell.cover-fat .cover-bottom {
+	font-size: 32px;
+	letter-spacing: 3px;
+	line-height: 1;
+  }
+  body.home .cover-cell.cover-mllm {
+	background-image: linear-gradient(136deg, #95CA22 29%, #B2ED33 74%, #D7FA11 100%);
+  }
+  body.home .cover-cell.cover-neuralcoref {
+	background-color: #6671ff;
+  }
+  body.home .cover-cell.cover-blue {
+	background-color: #6671ff;
+  }
+  body.home .cover-cell.cover-torchmoji {
+	background-image: linear-gradient(136deg, #D7147D 29%, #9D1E81 74%, #7A2383 100%);
+  }
+  body.home .cover-cell.cover-transfertransfo {
+	background-image: linear-gradient(136deg, #303033 29%, #494952 74%, #59596B 100%);
+  }
+  body.home .cover-cell.cover-dark {
+	background-image: linear-gradient(136deg, #303033 29%, #494952 74%, #59596B 100%);
+  }
+  body.home .cover-cell.cover-hmtl {
+	background-image: radial-gradient(circle at 50% 0, #E56C3E 0%, #F5BC3B 100%);
+  }
+  body.home .cover-cell.cover-transformers {
+	background-image: linear-gradient(-136deg, #7C42D9 29%, #B852E1 74%, #B847DC 100%);
+  }
+
+  body.home .cover-cell.cover-distilbert {
+	background-image: linear-gradient(112deg, #FF2020 0%, #F22E70 100%);
+  }
