@@ -40,12 +40,12 @@
 }
 
 .u-text-format h3 {
-    color: var(--secondary-text-color);
     font-size: 2rem;
     letter-spacing: -0.03rem;
 }
 
 .u-text-format h4 {
+    color: var(--secondary-text-color);
     font-size: 1.9rem;
     font-weight: 700;
 }
