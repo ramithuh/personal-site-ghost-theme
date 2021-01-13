@@ -50,6 +50,32 @@
     background-color: transparent;
     cursor: pointer;
 }
+.button-icon-toc {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    color: rgb(255,255,255);
+    background-color: transparent;
+    cursor: pointer;
+}
+.youtube-button-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    color: var(--darker-gray-color);
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .button-icon:hover .icon {
     opacity: 0.8;
