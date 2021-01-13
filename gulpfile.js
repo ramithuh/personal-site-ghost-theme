@@ -53,7 +53,8 @@ function js(done) {
     pump([
         src([
             'assets/js/lib/*.js',
-            'assets/js/main.js'
+            'assets/js/main.js',
+            'assets/js/covercells.js'
         ], {sourcemaps: true}),
         concat('main.min.js'),
         uglify(),
