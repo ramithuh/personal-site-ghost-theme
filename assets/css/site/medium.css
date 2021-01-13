@@ -52,7 +52,7 @@
     vertical-align: top;
     width: 250px;
     margin: 0 15px 30px;
-    border-radius: 3px;
+    border-radius: 5px;
     background: var(--white-color);
     box-shadow: 0 28px 29px rgba(102, 102, 102, 0.1);
     max-height: 320px;
