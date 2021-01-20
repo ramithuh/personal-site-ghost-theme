@@ -47,6 +47,16 @@
     color: var(--twitter-color);
 }
 
+.theme-dark .social-item-youtube {
+    color:var(--secondary-text-color);
+}
+.theme-dark .social-item-twitter {
+    color:var(--secondary-text-color);
+}
+.theme-dark .social-item-linkedin {
+    color:var(--secondary-text-color);
+}
+
 .theme-dark .logo-text {
     background: #267cee;
     background: -moz-linear-gradient(-455deg, #267cee 0%, #267cee 30%, #14b2fa 100%);
@@ -117,5 +127,14 @@
 
     html:not(.theme-light) .share-link-twitter {
         color: var(--twitter-color);
+    }
+    html:not(.theme-light) .social-item-youtube{
+        color: var(--secondary-text-color);
+    }
+    html:not(.theme-light) .social-item-twitter{
+        color: var(--secondary-text-color);
+    }
+    html:not(.theme-light) .social-item-linkedin{
+        color: var(--secondary-text-color);
     }
 }

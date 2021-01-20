@@ -20,6 +20,15 @@
     width: 24px;
     height: 24px;
 }
+.social-item-youtube{
+    color: red;
+}
+.social-item-twitter{
+    color: #00acee;
+}
+.social-item-linkedin{
+    color: #0e76a8;
+}
 
 .copyright {
     color: var(--secondary-text-color);
