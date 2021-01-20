@@ -12,15 +12,15 @@ p.count{
 	display: block;
 }
 div.opening{
-	background-color:#fff;
+	background-color:var(--lighter-gray-color);
 	width:48px;
 	height:48px;
 	border-radius:50%;
 	margin:0 auto;
-	border:3px solid #000;
+	border:3px solid var(--darker-gray-color);
 	position:relative}
 div.opening div.circle{
-	background-color:#000;
+	background-color:var(--darker-gray-color);
 	width:42px;
 	height:42px;
 	margin-left:-21px;
@@ -95,7 +95,7 @@ a.count span {
 	text-transform:uppercase;
 	font-family:"freight-sans-pro",sans-serif;
 	margin-top:5px;
-	color:#000;
+	color:var(--darker-gray-color);
 	font-weight:800;
 	display:block;
 	line-height: 13px;
@@ -130,9 +130,9 @@ a.kudobject{
 }
 .kudo.active a.kudobject div.opening{
 	border-color:#F2C362;
-	-webkit-transition:border-color 1000ms linear;
-    -ms-transition: border-color 1000ms linear;
-    transition: border-color 1000ms linear;
+	-webkit-transition:border-color var(--darker-gray-color)ms linear;
+    -ms-transition: border-color var(--darker-gray-color)ms linear;
+    transition: border-color var(--darker-gray-color)ms linear;
 }
 
 .kudo.complete a.kudobject div.opening div.circle{
@@ -154,7 +154,7 @@ a.kudobject{
 @keyframes bounce { 
   0% {
     transform: scale(1.1);
-    border-color: #000;
+    border-color: var(--darker-gray-color);
     opacity: 1;
   }
   50% {
@@ -172,7 +172,7 @@ a.kudobject{
 @-webkit-keyframes bounce { 
   0% {
     -webkit-transform: scale(1.1);
-    border-color: #000;
+    border-color: var(--darker-gray-color);
     opacity: 1;
   }
   50% {
@@ -190,7 +190,7 @@ a.kudobject{
 @-moz-keyframes bounce { 
   0% {
     -moz-transform: scale(1.1);
-    border-color: #000;
+    border-color: var(--darker-gray-color);
     opacity: 1;
   }
   50% {
