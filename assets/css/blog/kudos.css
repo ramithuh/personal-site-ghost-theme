@@ -93,7 +93,7 @@ a.count {
 a.count span {
 	width:auto;
 	text-transform:uppercase;
-	font-family:"freight-sans-pro",sans-serif;
+	font-family:"Raleway","Open+Sans";
 	margin-top:5px;
 	color:var(--darker-gray-color);
 	font-weight:800;
@@ -102,11 +102,12 @@ a.count span {
 	margin-top:5px;
 }
 a.count span.num {
-	font-size: 14px;
+	font-size: 18px;
 }
 a.count span.txt {
-	margin-top: 0px;
-	font-size: 12px;
+	margin-top: 7px;
+	font-size: 13px;
+	font-weight: 800;
 }
 a.count p span.dont-move{
 	font-size:18px;
