@@ -75,7 +75,10 @@ figure.kudo:hover {
 	-moz-transform: scale(1);
 }
 figure.kudo:hover .txt,
-figure.kudo .donot {
+figure.kudo .donot{
+	display: none;
+}
+figure.kudo .thanks{
 	display: none;
 }
 figure.kudo:hover .donot {
@@ -85,8 +88,11 @@ figure.kudo:hover .donot {
 .kudo.complete span.donot {
 	display: none;
 }
-.kudo.complete span.txt {
+.kudo.complete span.thanks {
 	display: block;
+}
+.kudo.complete span.txt {
+	display: none;
 }
 /*figure.kudo article a.kudobject p{text-align:center;display:block;margin:0;padding:0;line-height:50px;width:auto;height:auto}*/
 
@@ -126,6 +132,11 @@ a.count span.txt {
 a.count span.donot {
 	margin-top: 7px;
 	font-size: 14px;
+	font-weight: 800;
+}
+a.count span.thanks {
+	margin-top: 7px;
+	font-size: 13px;
 	font-weight: 800;
 }
 a.count p span.dont-move{
