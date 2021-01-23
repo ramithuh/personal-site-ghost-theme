@@ -86,6 +86,8 @@ Widgets.mediumFeeds = {
 
         if(!this.checkURL(cover)){
             cover = "/assets/images/cover.png";
+        }else{
+            cover = cover.replace("1024", "400");
         }
 
         return html = '<li><a href="'+ x +'" target="_blank">\
