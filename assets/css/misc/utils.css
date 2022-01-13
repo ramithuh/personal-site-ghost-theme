@@ -63,7 +63,7 @@
 
 .u-text-format a {
     color: var(--brand-color);
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: underline;
 }
 
@@ -75,6 +75,11 @@
 .u-text-format > .kg-card,
 .u-text-format > .kg-card + * {
     margin-top: 4.5rem;
+}
+.kg-embed-card {
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .u-text-format hr,

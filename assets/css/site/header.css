@@ -3,6 +3,9 @@
     align-items: center;
     height: var(--navbar-height);
 }
+.header-left{
+    margin-right: 90px;
+}
 
 .header-left,
 .header-right {
@@ -16,7 +19,7 @@
 }
 
 .header-right .menu-item {
-    margin: 0;
+    margin: 10;
 }
 
 .header-right .menu-item + .menu-item {

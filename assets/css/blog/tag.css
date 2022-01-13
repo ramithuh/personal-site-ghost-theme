@@ -20,7 +20,7 @@
 
 .tag-list {
     margin-top: 2rem;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .tag-list-label {
@@ -30,6 +30,7 @@
 
 .tag-list-item::before {
     content: "#";
+	color: var(--secondary-text-color);
 }
 
 .tag-list-item + .tag-list-item {

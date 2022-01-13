@@ -87,14 +87,14 @@ blockquote {
     margin-left: 0;
     padding: 2rem 3rem;
     border-left: 5px solid var(--brand-color);
-    color: var(--secondary-text-color);
-    font-size: 2.1rem;
+    color: var(--secondary-font-color);
+    font-size: 1.7rem;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 400;
     font-style: italic;
     letter-spacing: -0.03rem;
     text-align: center;
-    background-color: var(--lighter-gray-color);
+    background-color: var(--mid-gray-color);
 }
 
 blockquote strong {
@@ -135,12 +135,15 @@ figcaption a {
 pre {
     overflow-x: scroll;
     padding: 1.6rem 2.2rem;
-    color: var(--white-color);
-    font-size: 1.6rem !important;
+    color: var(--darker-gray-color);
+    font-size: 1.6rem!important;
     line-height: 1.5;
-    background-color: var(--darker-gray-color);
-    border-radius: 5px !important;
+    background-color: var(--lighter-gray-color);
+    border-radius: 5px!important;
     -webkit-overflow-scrolling: touch;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--light-gray-color);
 }
 
 hr {
