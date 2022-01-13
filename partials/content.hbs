@@ -75,6 +75,7 @@
     </div>
     {{#is "post"}}
         <footer class="single-footer container medium">
+            
             <div class="single-footer-left">
                 {{#prev_post}}
                     <div class="navigation navigation-previous">
@@ -87,6 +88,7 @@
                     </div>
                 {{/prev_post}}
             </div>
+            
             <div class="single-footer-middle">
                 <div class="single-footer-top">
                     <h3 class="single-footer-title"><i>Written by,</i></h3>
@@ -104,7 +106,10 @@
                             </div>
                         {{/foreach}}
                     </div>
+                    
                 </div>
+
+                
                 <div class="single-footer-bottom">
                     <div class="share">
                         <a class="share-link share-link-facebook"
@@ -138,6 +143,15 @@
                     </div>
                 {{/next_post}}
             </div>
+
+            
         </footer>
+            <script src="https://utteranc.es/client.js"
+                repo="ramithuh/discussions"
+                issue-term="url"
+                theme="preferred-color-scheme"
+                crossorigin="anonymous"
+                async>
+            </script>
     {{/is}}
 </article>
