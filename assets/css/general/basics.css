@@ -8,6 +8,7 @@
     --mid-gray-color: #ccc;
     --dark-gray-color: #444;
     --darker-gray-color: #1a1a1a;
+    --very-dark-gray-color: #000;
     --black-color: #000;
     --green-color: #28a745;
     --orange-color: #ffc107;
@@ -150,8 +151,8 @@ hr {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border: 0;
     background-color: var(--secondary-text-color);
     border-radius: 50%;
@@ -161,8 +162,8 @@ hr::before,
 hr::after {
     content: "";
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     background-color: var(--secondary-text-color);
     border-radius: 50%;
 }
@@ -246,3 +247,31 @@ table:not(.highlight) tfoot td {
         white-space: nowrap;
     }
 }
+
+.box{
+    content: " ";
+    border-radius: 6px;
+    display: inline-block;
+
+    position: absolute;
+    color: var(--white-color);
+    margin-left:10px;
+    padding: 5px 10px;
+    text-align: center;
+    background-color: var(--very-dark-gray-color);
+    font-size: 0.8em;
+    max-width: 400px;
+    opacity: 1;
+  }
+
+  .box::after{
+    content: "";
+    position: absolute;
+    top: 15%;
+    right: 100%;
+    /* margin-top: -5px; */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent  var(--very-dark-gray-color) transparent transparent;
+    opacity: 1;
+  }

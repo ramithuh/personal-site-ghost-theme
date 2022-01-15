@@ -820,3 +820,22 @@ function pswp(container, element, trigger, caption, isGallery) {
         onThumbnailsClick(e);
     });
 }
+
+$( "a" ).hover(
+    
+    function() {   
+
+            var title = $(this).attr("data-title");
+
+            if (typeof title !== 'undefined' && title !== false) {
+                $('<div/>', {
+                    text: title,
+                    class: 'box'
+                }).appendTo(this); 
+            }
+
+        
+    }, function() {
+      $(document).find("div.box").remove();
+    }
+  );
