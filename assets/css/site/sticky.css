@@ -83,7 +83,7 @@
     padding: 0.6rem 1.7rem;
     font-size: 1.1rem;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .sticky-toc-link-indented::before {

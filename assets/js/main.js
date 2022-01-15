@@ -234,6 +234,23 @@ $(window).on('load', function () {
     }
 });
 
+function getViewport () {
+    // https://stackoverflow.com/a/8876069
+    var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+    // if (width <= 576) return 'xs';
+    // if (width <= 768) return 'sm';
+    // if (width <= 992) return 'md';
+    // if (width <= 1200) return 'lg';
+
+    if(width > 1250){
+        return 'xl';
+    }else{
+        return 'no';
+    }
+  }
+
+
 function sticky() {
     'use strict';
     st = jQuery(window).scrollTop();
@@ -242,10 +259,16 @@ function sticky() {
         if (st > lastSt) {
             if (st > titleOffset) {
                 body.addClass('sticky-visible');
+                if(getViewport() == 'xl'){
+                    body.addClass('toc-opened');
+                }
             }
         } else {
             if (st <= titleOffset) {
                 body.removeClass('sticky-visible');
+                if(getViewport() == 'xl'){
+                    body.removeClass('toc-opened');
+                }
             }
         }
     }
@@ -427,13 +450,20 @@ function toc() {
                     $(this).prop('tagName') == 'H3'
                         ? 'sticky-toc-link sticky-toc-link-indented'
                         : 'sticky-toc-link';
+
+                var rsc = "";
+                if ($(value).text()=="Resources :"){
+                    rsc = "✴︎ ";
+                    linkClass = 'sticky-toc-link';
+                }
+
                 output +=
                     '<a class="' +
                     linkClass +
                     '" href="#' +
                     $(value).attr('id') +
                     '">' +
-                    $(value).text() +
+                    rsc + $(value).text() +
                     '</a>';
             });
 
@@ -664,6 +694,7 @@ function theme() {
         $("#0xAIT").attr("src","/assets/images/orgs/0xAIT_light.png");
         $("#CSIRO").attr("src","/assets/images/orgs/csiro_light.png");
         $("#YAALA").attr("src","/assets/images/orgs/yaalalabs_light.png");
+        $("#SPS").attr("src","/assets/images/orgs/sps_light.png");
     }
 
     function light() {
@@ -673,6 +704,7 @@ function theme() {
         $("#0xAIT").attr("src","/assets/images/orgs/0xAIT.png");
         $("#CSIRO").attr("src","/assets/images/orgs/csiro.png");
         $("#YAALA").attr("src","/assets/images/orgs/yaalalabs.png");
+        $("#SPS").attr("src","/assets/images/orgs/sps.png");
     }
 
     switch (localStorage.getItem('dawn_theme')) {
