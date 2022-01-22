@@ -220,6 +220,22 @@ $(window).on('scroll', function () {
         }
         timeout = window.requestAnimationFrame(sticky);
     }
+    // var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    // $(".sidenote").each(function() {
+    //   /* Check the location of each desired element */
+    //   var objectBottom = $(this).offset().top + $(this).outerHeight();
+      
+    //   /* If the element is completely within bounds of the window, fade it in */
+    //   if (objectBottom + $(window).height() / 4 - $(this).outerHeight() < windowBottom && objectBottom + 3*$(window).height() / 4 - 3*$(this).outerHeight()/4> windowBottom ) { //object comes into view (scrolling down)
+    //     if ($(this).css("opacity")==0) {
+    //         $(this).fadeTo(300,1);
+    //     }
+    //   }else { //object goes out of view (scrolling up)
+    //     if ($(this).css("opacity")==1) {
+    //         $(this).fadeTo(300,0);
+    //     }
+    //   }
+    // });
 });
 
 $(window).on('load', function () {
@@ -259,17 +275,21 @@ function sticky() {
         if (st > lastSt) {
             if (st > titleOffset) {
                 body.addClass('sticky-visible');
-                if(getViewport() == 'xl'){
-                    body.addClass('toc-opened');
-                }
+
             }
         } else {
             if (st <= titleOffset) {
                 body.removeClass('sticky-visible');
-                if(getViewport() == 'xl'){
-                    body.removeClass('toc-opened');
-                }
             }
+        }
+
+        if (st > titleOffset && st <  1200) {
+            if(getViewport() == 'xl'){
+                body.addClass('toc-opened');
+            }
+        }
+        else{
+            body.removeClass('toc-opened');
         }
     }
 
