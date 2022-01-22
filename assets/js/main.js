@@ -821,17 +821,53 @@ function pswp(container, element, trigger, caption, isGallery) {
     });
 }
 
+$(document).ready(function(){
+  var elements = $("[paper-citations]");
+  elements.each(function() {
+        var title = $(this).attr("paper-title");
+        var show_citation = $(this).attr("paper-citations");
+        var element = this;
+
+        $(this).attr("href", "https://scholar.google.com/scholar?q=" + title);
+
+        if(show_citation=="false"){
+            $.getJSON('https://gs-metrics.ramith.workers.dev/?paper_title=' + title, function(data) {
+                $(element).attr("paper-citations",data.count);
+            });
+
+        }else{
+            $.getJSON('https://gs-metrics.ramith.workers.dev/?paper_title=' + title, function(data) {
+                $(element).text( " · " + data.count + " · " );
+            });
+        }
+
+  });
+});
+
+
 $( "a" ).hover(
     
     function() {   
 
-            var title = $(this).attr("data-title");
-
+            var title = $(this).attr("paper-title");
+            var authors = $(this).attr("paper-authors");
+            var conf = $(this).attr("paper-conf");
+            var citations = $(this).attr("paper-citations");
+            
             if (typeof title !== 'undefined' && title !== false) {
-                $('<div/>', {
-                    text: title,
-                    class: 'box'
-                }).appendTo(this); 
+                // $('<div/>', {
+                //     text: title,
+                //     class: 'box'
+                // }).appendTo(this); 
+
+                $(this).append('<div class="box">' + 
+                '<ul style="list-style-type: none; padding-left:1em;">'+
+                '<li><strong>'+ title +' </strong>'+
+                ' <u>[PDF]</u><br>'+
+                authors + '<br><i>'+
+                conf + '</i><br>' + 
+                citations +'</li>'+
+                '</ul></div>');
             }
 
         
