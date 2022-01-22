@@ -62,7 +62,7 @@ a:hover {
 }
 
 a.tooltip:hover {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 h1,
@@ -265,9 +265,10 @@ table:not(.highlight) tfoot td {
     text-align: left;
     background-color: var(--very-dark-gray-color);
     font-size: 0.7em;
-    max-width: 500px;
+    max-width: 475px;
     opacity: 1;
     box-shadow: 0px 10px 28px hsla(0,0%,40%,.75);
+    z-index: 100;
 }
 
 .box::after{
@@ -275,6 +276,41 @@ table:not(.highlight) tfoot td {
     position: absolute;
     top: 10%;
     right: 100%;
+    /* margin-top: -5px; */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent  var(--very-dark-gray-color) transparent transparent;
+    opacity: 1;
+}
+
+
+.sidenote .tooltip .box{
+    content: " ";
+    border-radius: 5px;
+    display: inline-block;
+
+    position: absolute;
+    color: var(--white-color);
+    margin-left: 0px;
+    margin-top:-3px;
+    padding: 5px 15px 5px 5px;
+    text-align: left;
+    background-color: var(--very-dark-gray-color);
+    max-width: 475px;
+    min-width: 250px;
+
+    display: flex;
+    font-size: 1em;
+    opacity: 1;
+    box-shadow: 0px 10px 28px hsla(0,0%,40%,.75);
+}
+
+.sidenote .tooltip .box::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px;
     /* margin-top: -5px; */
     border-width: 5px;
     border-style: solid;
@@ -296,6 +332,7 @@ table:not(.highlight) tfoot td {
     /* margin-right: -41.5%; */
     margin-right: -31%;
     position: relative;
+    margin-top: -40px;
 
     font-size: 12px;
     color: rgba(var(--very-dark-gray-color-rgb), 0.6);
@@ -303,4 +340,14 @@ table:not(.highlight) tfoot td {
     font-weight: 500;
 
     transform: translateY(-30%);
+  }
+
+  .citations{
+    font-size: 1.4rem;
+    color: var(--brand-color);
+    font-weight: 400;
+    font-style :italic;
+  }
+  .improvement{
+      color: #28a745;
   }
