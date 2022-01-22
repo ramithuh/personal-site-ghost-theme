@@ -483,7 +483,7 @@ function toc() {
 
             $('html, body').animate(
                 {
-                    scrollTop: $(link).offset().top - 82,
+                    scrollTop: $(link).offset().top - 68,
                 },
                 500
             );
