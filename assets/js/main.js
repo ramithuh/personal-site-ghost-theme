@@ -711,6 +711,7 @@ function theme() {
         html.removeClass('theme-light').addClass('theme-dark');
         localStorage.setItem('dawn_theme', 'dark');
         toggleText.text(toggle.attr('data-dark'));
+        $("#HARVARD").attr("src","/assets/images/orgs/harvard_light.png");
         $("#0xAIT").attr("src","/assets/images/orgs/0xAIT_light.png");
         $("#CSIRO").attr("src","/assets/images/orgs/csiro_light.png");
         $("#YAALA").attr("src","/assets/images/orgs/yaalalabs_light.png");
@@ -721,6 +722,7 @@ function theme() {
         html.removeClass('theme-dark').addClass('theme-light');
         localStorage.setItem('dawn_theme', 'light');
         toggleText.text(toggle.attr('data-light'));
+        $("#HARVARD").attr("src","/assets/images/orgs/harvard.png");
         $("#0xAIT").attr("src","/assets/images/orgs/0xAIT.png");
         $("#CSIRO").attr("src","/assets/images/orgs/csiro.png");
         $("#YAALA").attr("src","/assets/images/orgs/yaalalabs.png");
