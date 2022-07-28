@@ -26,6 +26,9 @@ pre {
     font-family: monospace;
     font-size: 1em;
 }
+pre code{
+    background-color: var(--lighter-gray-color);
+}
 
 a {
     background-color: transparent;
@@ -49,6 +52,9 @@ samp {
     font-size: 1em;
 }
 
+code{
+    background-color: #cb24311c;
+}
 small {
     font-size: 80%;
 }

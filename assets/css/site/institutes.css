@@ -173,6 +173,11 @@
     .image.is-88x88 {
       height: 88px;
       width: 88px; }
+  
+    .image.is-96x144 {
+      height: 96px;
+      width: 144px; }
+    
     .image.is-96x96 {
       height: 96px;
       width: 96px; }
@@ -194,3 +199,12 @@
     .pb-2 {
         padding-bottom: 0rem !important; 
         text-shadow: 0px 0px 20px hsl(0deg 0% 40%/30%);}
+
+      
+      .footnote {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        }

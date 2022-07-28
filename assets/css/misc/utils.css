@@ -45,7 +45,7 @@
 }
 
 .u-text-format h4 {
-    color: var(--secondary-text-color);
+    color: var(--darker-gray-color);
     font-size: 1.9rem;
     font-weight: 700;
 }
@@ -161,4 +161,11 @@
     height: 100%;
     object-fit: cover;
     box-shadow: 8px 8px 20px 0 hsl(0deg 0% 0%/15%);
+}
+.kg-toggle-card h4.kg-toggle-heading-text {
+    font-size: 1.7rem!important;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0;
 }

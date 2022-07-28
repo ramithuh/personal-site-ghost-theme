@@ -142,8 +142,8 @@ pre {
     overflow-x: scroll;
     padding: 1.6rem 2.2rem;
     color: var(--darker-gray-color);
-    font-size: 1.6rem!important;
-    line-height: 1.5;
+    font-size: 1.35rem!important;
+    line-height: 1.1;
     background-color: var(--lighter-gray-color);
     border-radius: 5px!important;
     -webkit-overflow-scrolling: touch;
@@ -264,8 +264,11 @@ table:not(.highlight) tfoot td {
     padding: 5px 15px 5px 5px;
     text-align: left;
     background-color: var(--very-dark-gray-color);
-    font-size: 0.7em;
-    max-width: 475px;
+
+    font-size: 1.2rem;
+    line-height: 1.6;
+
+    max-width: 480px;
     opacity: 1;
     box-shadow: 0px 10px 28px hsla(0,0%,40%,.75);
     z-index: 100;
@@ -300,7 +303,8 @@ table:not(.highlight) tfoot td {
     min-width: 250px;
 
     display: flex;
-    font-size: 1em;
+    font-size: 1.1rem;
+    line-height: 1.6;
     opacity: 1;
     box-shadow: 0px 10px 28px hsla(0,0%,40%,.75);
 }
