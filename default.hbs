@@ -49,12 +49,18 @@
                 <main class="site-main">
                     <div class="post-news-feed container medium">
                     <h2>News</h2>
-                    {{#get "posts" limit="6"  filter="tag:news"}}
+                    {{#get "posts" limit="6"  filter="tag:[news]+tag:[featured]"}}
                     {{#foreach posts visibility="all"}}
                         {{> "newsloop"}}
                     {{/foreach}}
                     {{/get}}
+                    <div class="infinite-scroll-action">
+                        <a href="/news" class="button button-secondary">View all news</a>
+                    {{!-- <button class="button button-secondary infinite-scroll-button">View more</button> --}}
                     </div>
+                    </div>
+
+
                 </main>
             </div>
             {{> featured}}
@@ -63,31 +69,20 @@
             {{{body}}}
         </div>
         {{#is "post"}}
+            
         {{else}}
+            {{#is "tag"}}
+          
+
+            {{else}}
+           {{#is "news"}}
+            {{else}}
+            
+           
         <br>
         <hr>
         <br>
-        <div id="medium-articles">
-            <div class="heading">
-            <div class="text">My latest articles on Medium & Svbtle</div>
-            </div>
-            <div data-scope="medium-feed" class="loading-content"></div>
 
-        
-            <script type="text/javascript">
-            $(document).ready(function () {
-                Widgets.mediumFeeds.fetch();
-            })
-            </script>
-            <div data-scope="svbtle-feed" class="loading-content"></div>
-
-
-            <script type="text/javascript">
-            $(document).ready(function () {
-                Widgets.svbtleFeeds.fetch();
-            })
-            </script>
-        </div>
         <br>
 
         
@@ -138,7 +133,7 @@
                 </div>
    
                     <div class="cover-wrapper">
-                    <a target="_blank" href="http://processor-viz.vercel.app/">
+                    <a target="_blank" href="https://processor-visualizer.ramith.fyi">
                         <div class="cover-cell cover-standard cover-blue" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1) 0s;">
                             <div class="cover-inner">
                                 <div class="cover-title large text-center">Multi-Core Processor</div>
@@ -159,7 +154,9 @@
             </div>
 	        </div>
         </div>
+             {{/is}}
         {{/is}}
+         {{/is}}
 
         {{> footer}}
         {{> modal}}
