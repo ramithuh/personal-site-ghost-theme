@@ -3,11 +3,17 @@
 <div class="content-area-feed">
     <main class="site-main">
         <div class="post-feed container medium">
+
+    
+            {{#get "posts" limit="7"  filter="tag:-[news]+tag:-[rejections]+featured:false"}}
                 {{#foreach posts}}
-                {{^has tag="news"}}
+                    {{!-- {{^has tag="news"}}
+                        {{^has tag="rejections"}} --}}
                     {{> "loop"}}
-                {{/has}}
+                        {{!-- {{/has}} --}}
+                    {{!-- {{/has}} --}}
                 {{/foreach}}
+            {{/get}}
         </div>
         {{pagination}}
     </main>
