@@ -49,13 +49,15 @@
                 <main class="site-main">
                     <div class="post-news-feed container medium">
                     <h2>News</h2>
-                    {{#get "posts" limit="6"  filter="tag:[news]+tag:[featured]"}}
+                    {{#get "posts" limit="7"  filter="tag:[news]+tag:[featured]"}}
                     {{#foreach posts visibility="all"}}
                         {{> "newsloop"}}
                     {{/foreach}}
                     {{/get}}
                     <div class="infinite-scroll-action">
                         <a href="/news" class="button button-secondary">View all news</a>
+                        <p> ‎‏‏‎ ‎ </p>
+                        <a href="/rejections#orgs-list" class="button button-negative">Rejections List</a>
                     {{!-- <button class="button button-secondary infinite-scroll-button">View more</button> --}}
                     </div>
                     </div>
