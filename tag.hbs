@@ -29,11 +29,53 @@
                 {{/if}}
             </section>
         {{/tag}}
+
+        
         <div class="post-feed container medium">
             {{#foreach posts visibility="all"}}
                 {{> "loop"}}
             {{/foreach}}
+        
+
+
+
+
+
+            
         </div>
+
+       
         {{pagination}}
+
+
+        <div class="container medium">
+
+
+            {{!!-- check if tag is 'stories'}}
+            {{#tag}}
+            {{#match name "=" "stories"  }}
+            
+                    <br>
+                    <hr>
+                    <h1 class="tag-name">Mastodon Toots </h1>
+                    <h3><a href="https://sigmoid.social/@ramith">@ramith@sigmoid.social</a></h3>
+
+                    <div id="mt-timeline" class="mt-timeline">
+                        <div id="mt-body" class="mt-body">
+                        <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+
+                    <br>
+            {{/match}}
+             {{/tag}}
+
+
+
+
+            
+        </div>
+
+        
     </main>
 </div>
