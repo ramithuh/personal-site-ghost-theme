@@ -109,8 +109,14 @@
     text-transform: capitalize;
 }
 
+.sticky-toc-link-main{
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
 .sticky-toc-link-indented::before {
-    content: "-";
+    content: " •";
     margin-right: 0.5rem;
 }
 

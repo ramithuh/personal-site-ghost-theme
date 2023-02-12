@@ -19,15 +19,36 @@
 .cover-icon {
     position: relative;
     margin-bottom: 2rem;
+
+    /* position: absolute; */
 }
 
 .cover-icon-image {
-    width: 180px;
+    width: 250px;
+    border-radius: 50%;
+    /* box-shadow: 5px 6px 20px 9px hsla(0,0%,40%,.1); */
+    box-shadow: 2px 2px 20px 9px hsl(203deg 100% 37% / 17%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* .cover-icon-image-hover {
+    width: 230px;
     border-radius: 50%;
     box-shadow: 5px 6px 20px 9px hsla(0,0%,40%,.1);
     margin-left: auto;
     margin-right: auto;
-}
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+} */
+
+/* .cover-icon:hover .cover-icon-image-hover {
+    display: inline;
+} */
 
 .cover-icon-image.white {
     position: absolute;
@@ -37,7 +58,7 @@
 }
 
 .cover-description {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .cover-cta {

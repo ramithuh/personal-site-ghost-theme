@@ -2,13 +2,15 @@
 
 <div class="content-area">
     <main class="site-main">
+        {{#get "tags" limit="all" filter="slug:[ml]" as |tag|}}
+
         {{#tag}}
             <section class="tag">
                 <div class="container medium">
-                    <h1 class="tag-name">{{name}}</h1>
-                    {{#if description}}
+                    <h1 class="tag-name">Signal Processing + Machine Learning</h1>
+                    {{!-- {{#if description}}
                         <div class="tag-description">{{description}}</div>
-                    {{/if}}
+                    {{/if}} --}}
                     {{#get "tags" limit="all" filter="id:-{{id}}+visibility:public" as |tags|}}
                         {{#if tags}}
                             <div class="tag-list">
@@ -29,29 +31,14 @@
                 {{/if}}
             </section>
         {{/tag}}
-
-        
+         {{/get}}
         <div class="post-feed container medium">
+            {{#get "posts"  filter="tag:[ml,sns]"}}
             {{#foreach posts visibility="all"}}
                 {{> "loop"}}
             {{/foreach}}
-        
-
-
-
-
-
-          
-        
-          
-        </div> 
-
-       
-        {{pagination}}
-
-
-
-
-        
+            {{/get}}
+        </div>
+        <br>
     </main>
 </div>

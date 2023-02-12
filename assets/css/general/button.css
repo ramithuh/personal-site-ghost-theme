@@ -37,6 +37,10 @@
     color: var(--darker-gray-color);
 }
 
+.button-negative {
+    color: var(--dark-gray-color);
+}
+
 .button-icon {
     display: inline-flex;
     justify-content: center;

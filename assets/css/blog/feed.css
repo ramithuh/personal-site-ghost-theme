@@ -19,6 +19,8 @@
     transform: translateX(0.4rem);
 }
 
+
+
 .feed + .feed {
     border-top: 1px solid var(--light-gray-color);
 }
@@ -102,4 +104,14 @@
     color: var(--secondary-text-color);
     transition: transform 0.2s var(--animation-base);
     transform: translateX(2rem);
+}
+
+.feed-icon-visible {
+    position: absolute;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    color: var(--secondary-text-color);
+    transition: transform 0.2s var(--animation-base);
+    transform: translateX(0.4rem);
 }

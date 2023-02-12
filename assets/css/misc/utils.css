@@ -3,6 +3,9 @@
     line-height: 1.8;
 }
 
+.u-text-format2 {
+}
+
 .u-text-format > * {
     margin-bottom: 0;
 }
@@ -74,6 +77,41 @@
     transition:         all 300ms ease;
 }
 
+.box a{
+    font-weight: 500;
+    color: var(--white-color) !important;
+    /* text-decoration: underline; e8e8e8 */
+    -webkit-transition: all 300ms ease;
+    -moz-transition:    all 300ms ease;
+    -ms-transition:     all 300ms ease;
+    -o-transition:      all 300ms ease;
+    transition:         all 300ms ease;
+}
+
+.u-text-format2 a {
+    color: var(--brand-color);
+    /* text-decoration: underline; e8e8e8 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom-color: var(--light-gray-color) !important; 
+    -webkit-transition: all 300ms ease;
+    -moz-transition:    all 300ms ease;
+    -ms-transition:     all 300ms ease;
+    -o-transition:      all 300ms ease;
+    transition:         all 300ms ease;
+}
+
+.link_bio{
+    color: var(--brand-color);
+    /* text-decoration: underline; e8e8e8 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom-color: var(--light-gray-color) !important; 
+    -webkit-transition: all 300ms ease;
+    -moz-transition:    all 300ms ease;
+    -ms-transition:     all 300ms ease;
+    -o-transition:      all 300ms ease;
+    transition:         all 300ms ease;
+}
+
 .u-text-format a:hover {
 
     color: var(--brand-color);
@@ -83,6 +121,13 @@
     border-bottom-color: var(--brand-color) !important; 
     
 }
+.box a:hover {
+
+    
+}
+
+
+
 
 .u-text-format ul li + li,
 .u-text-format ol li + li {

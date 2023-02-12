@@ -7,11 +7,11 @@
 @import "site/layout.css";
 @import "site/header.css";
 @import "site/sticky.css";
-@import "site/cover.css";
 @import "site/medium.css";
 @import "site/footer.css";
 @import "site/modal.css";
 @import "site/search.css";
+@import "site/cover.css";
 @import "site/popular.css";
 @import "site/burger.css";
 @import "site/institutes.css";

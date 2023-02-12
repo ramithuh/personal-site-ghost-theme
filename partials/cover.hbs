@@ -3,27 +3,59 @@
         <div class="row">
         <div class="col-sm-4">
             <div class="cover-icon">
-                <img class="cover-icon-image" src="{{asset 'images/ramith.png'}}" alt="{{@site.title}}">
+              <br>
+              <h3 style="font-weight:600" >Hey! I'm Ramith 😃</h3>
+              <img class="cover-icon-image" src="{{asset 'images/ramith_winter.jpeg'}}" alt="Ramith, smiling and waving at the camera">
+                
+                <!--<img class="cover-icon-image-hover" src="{{asset 'images/ramith_winter.jpeg'}}" alt="{{@site.title}}">-->
             </div>
         </div>
         <div class="col-sm-8">
             {{#if @site.description}}
-            <div class="cover-description"><h3 >Hey! I'm Ramith 😃</h3>
-            <p>{{@site.description}}</p>
+            <div class="cover-description">
+            <p style="font-weight:500">{{@site.description}}, co-advised by <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=LHmeoN4AAAAJ&hl=en" target="_blank">Dr. Dushan Wadduwage</a> and <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=8KJ9gf4AAAAJ&hl=en" target="_blank"> Dr. Sergey Ovchinnikov.</a>
+             <br> I completed my bachelor's degree from University of Moratuwa, Sri Lanka 🇱🇰<br><br>
+              &#10077;&nbsp; I'm passionate towards using <b>Machine Learning for Scientific Advancements (especially towards healthcare)</b> while making sure these models are <b>Robust, Interpretable and Equitable$^{\star}$ &#10078;</b>. 
+
+            </p>
+
+            <p style="margin-top:-1em;">
+             
+              $^{\star}$For the most part, I <a class="link_bio tooltip_cover" paper-title="text" description="While being an undergrad, during the pandemic, I led the project of creating a virtual career fair platform for my university in Sri Lanka that connected 900+ students and 70+ companies. I co-developed an algorithm that would bring students fair opportunities to meet their employer and schedule their interviews. <br><br> In this process, I learned first hand ethical and humane considerations that need to be factored into writing an algorithm to match companies to students. If we give the flexibility to a company to select undergraduates, they will select the best according to a limited number of criteria which may not be equitable leaving some undergraduates without an opportunity to even have a mock interview. So, there were a lot of aspects to think about when building fair and equitable programs. I had never experienced how an algorithm I write could affect thousands of people, and taught me about our responsibility to look at the broader impact.
+">discovered</a> 
+              this interest of mine through my volunteering efforts at Rotaract.  <br>
+            </p>
+            </p>
             {{!-- <p>This is my experimental version of the new personal website.
               I needed a space to centralize the content I post through various blogging platforms such as medium, svbtle and my own <a href="https://blog.ramith.fyi">blog</a>.
               This website accomplishes just that!
             </p> --}}
-            <p >
-                 Through this blog, I aspire to clearly write and share about <br> concepts
+            <p id="orgs-list" style="font-weight:500">
+                 I started this blog when I was learning Signals and Systems back in <a class="link_bio" href="https://ramith.fyi/does-a-laplace-transform-exist-for-sin-t/" target="_blank">2018</a>, and through this blog, I aspire to clearly write (+ develop visualizations)$^\dagger$ about concepts
                   & advancements that <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">awe</span> me. 
-            </p>
-        
+                  Occasionally I record piano covers and try to sing songs. You can find them <a class="link_bio" href="https://www.youtube.com/RamithHettiarachchi" target="_blank">here.</a> 🎹
+                  <br><font size="2"> &nbsp; &nbsp;&nbsp; $^\dagger$Inspired by Distill.pub</font> 
+                  
+            <div class="u-text-format2">
+              <p style="text-align:center">
+                <a target="_blank" href="mailto:ramithhettiarachchi@fas.harvard.edu">Email</a> &nbsp;/&nbsp;
+                <a target="_blank" href="assets/pdf/Ramith_CV_public.pdf">CV</a> &nbsp;/&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=NjG1z50AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
+                <a target="_blank" href="https://twitter.com/ramithuh">Twitter</a> &nbsp;/&nbsp;
+                <a href="#viz">Visualizations</a> &nbsp;/&nbsp;
+                <a target="_blank" href="https://github.com/ramithuh">Github</a>
+              </p>
+
+              
+            </div>
+
             </div>
             {{/if}}
             <hr>
-            <br>
-            <div class="container">
+          
+           
+
+            <div class="container" >
             <!--<div class="org-text">
             <p align="left"><u>Here are some organizations I am/was affiliated with,</u></p></div>-->
 
@@ -56,13 +88,13 @@
     
 </div>
 
-        <section class="org-wrapper">
+        <section class="org-wrapper" >
             <div class="container large">
             <div class="level">
                 <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2">
-                        <b>University of Moratuwa</b><br>
+                        <b>University of Moratuwa, Sri Lanka</b><br>
                         Oct 2017 - June 2022
                       </p>
                       <a class="image is-96x96 text-decoration-none" target="_blank" href="https://uom.lk/university_news/uom-wins-first-runner-award-2020-cass-covid-19-special-student-design-competition">
@@ -141,7 +173,7 @@
                     <div>
                       <p class="heading pb-2"><b>SPS Student Branch</b><sup>﹡</sup>
                           <br>
-                          Sep 2020 - Present
+                          Sep 2020 - Sep 2022
                       </p>
                       <a class="image is-96x96 text-decoration-none" target="_blank" href="https://edu.ieee.org/lk-uomsps/">
                         <img id="SPS" src="/assets/images/orgs/sps.png">

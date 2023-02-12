@@ -18,6 +18,8 @@
     <script type="text/javascript" src="{{asset "built/jquery.cookie.js"}}"></script>
     <script type="text/javascript" src="{{asset "built/kudos.js"}}"></script>
     <script type="text/javascript" src="{{asset "built/cf_kudos.js"}}"></script>
+    <script type="text/javascript" src="{{asset "built/mastodon-timeline.js"}}"></script>
+    
     <script>
         var localTheme = localStorage.getItem('dawn_theme');
         switch (localTheme) {
@@ -44,12 +46,11 @@
         {{> header}}
         {{#is "home"}}
             {{> cover}}
-            <br>
             <div class="content-area-feed">
                 <main class="site-main">
                     <div class="post-news-feed container medium">
                     <h2>News</h2>
-                    {{#get "posts" limit="7"  filter="tag:[news]+tag:[featured]"}}
+                    {{#get "posts" limit="10"  filter="tag:[news]+tag:[featured]"}}
                     {{#foreach posts visibility="all"}}
                         {{> "newsloop"}}
                     {{/foreach}}
@@ -57,14 +58,40 @@
                     <div class="infinite-scroll-action">
                         <a href="/news" class="button button-secondary">View all news</a>
                         <p> ‎‏‏‎ ‎ </p>
-                        <a href="/rejections#orgs-list" class="button button-negative">Rejections List</a>
-                    {{!-- <button class="button button-secondary infinite-scroll-button">View more</button> --}}
+                       
+                        <a href="https://scholar.google.com/citations?hl=en&user=NjG1z50AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="button button-secondary">
+                        <svg class="icon"><use xlink:href="#google-scholar"></use></svg>
+                        <p> ‎‏‏‎ ‎‎‏‏‎ ‎ </p>Google Scholar →</a>
+                       {{!--     <a href="/rejections#orgs-list" class="button button-negative">Rejections List</a>
+                   <button class="button button-secondary infinite-scroll-button">View more</button> --}}
+                        
+                    
                     </div>
+                <br>
+                <script>
+                    function showNotice() {
+                        var x = document.getElementById("sl-hidden");
+                        if (x.style.display === "none" || x.style.display === "") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
+             
+                    <div class="sl" onclick="showNotice();">Undergrad from Sri Lanka?</div>
+                    <div id="sl-hidden">
+                    <p style="line-height:1em;"><font size=2 color="grey"><br>I allocate ~1.5 hours per week to have 1:1 sessions with undergrads who wants any advice/guidance. If you are such an undergrad, you can schedule a time <a class="link_bio" href="https://events.ramith.fyi/discussion" target="_blank">here.</a> <br> <font color="red">After scheduling, pls add it to your calendar.</font> There were some occasions when the person did not show up. Keep in mind that another person could also benefit from the slot you pick right now. 😄</font></p>
+                        </div>
+                        
+          
                     </div>
+                    
 
 
                 </main>
             </div>
+            {{!-- {{> publications}} --}}
             {{> featured}}
         {{/is}}
         <div class="site-content">
@@ -78,6 +105,9 @@
 
             {{else}}
            {{#is "news"}}
+           
+            {{else}}
+            {{#is "awards"}}
             {{else}}
             
            
@@ -90,7 +120,8 @@
         
         <div class="section-science" id="science">
 	        <div class="container-home container-science">
-		    <div class="title">Some Visualization Tools I've built</div>
+     
+		    <div class="title" id="viz">Some Visualization Tools I've built</div>
 
 		
             <div class="row">
@@ -109,7 +140,7 @@
                     <div class="cover-details">
                         <h4 class="typo">D* Lite Algorithm</h4>
                         <div class="details">
-                            As part of my internship project, I wanted to implement the D* Lite algorithm, with dynamic obstacle creation aspect
+                            As part of my internship, I wanted to implement the D* Lite algorithm, with dynamic obstacle creation aspect. <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">(WebAssembly)</span>
                         </div>
                     </div>
                 </div>
@@ -129,7 +160,7 @@
                     <div class="cover-details">
                         <h4 class="typo">Project Intelliscope</h4>
                         <div class="details">
-                            As part of a medical research, built a model visualization tool to get more intuition on what sort of learning has the model performed.
+                            As part of a medical research, built a model visualization tool to get more intuition on what sort of learning has the model performed. <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">(TensorSpace.js)</span>
                         </div>
                     </div>
                 </div>
@@ -149,7 +180,7 @@
                     <div class="cover-details">
                         <h4 class="typo">FPGA Group Project</h4>
                         <div class="details">
-                            To test our ISA and the functionality of any assembly code, I developed a tool to simulate the activity of each core.
+                            To test our ISA and the functionality of any assembly code, I developed a tool to simulate the activity of each core. <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">(p5.js)</span>
                         </div>
                     </div>
                 </div>
@@ -158,6 +189,7 @@
         </div>
              {{/is}}
         {{/is}}
+         {{/is}}
          {{/is}}
 
         {{> footer}}
