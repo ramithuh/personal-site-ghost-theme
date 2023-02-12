@@ -423,23 +423,20 @@ function gallery() {
 
 
         var id = container.id;
-        pswp(
-            '.kg-gallery-container-side',
-            '.kg-gallery-image',
-            '.kg-gallery-image',
-            id,
-            true
-        );
+
+
+        if(id!==""){
+            console.log(id)
+            pswp(
+                '.kg-gallery-container-side',
+                '.kg-gallery-image',
+                '.kg-gallery-image',
+                id,
+                true
+            );
+        }
 
     });
-
-    // pswp(
-    //     '.kg-gallery-container-side',
-    //     '.kg-gallery-image',
-    //     '.kg-gallery-image',
-    //     false,
-    //     true
-    // );
 
 
     pswp(
@@ -860,13 +857,36 @@ function pswp(container, element, trigger, caption, isGallery) {
 
     $(container).on('click', trigger, function (e) {
         onThumbnailsClick(e);
+        console.log(caption);
     });
-    $("#yo").on("click", function (e) {
-        e.preventDefault();
-        var clickedGallery = $(container);
-        var index = 0; // replace 0 with the desired index for the thumbnail
-        openPhotoSwipe(index, clickedGallery[0]);
-    });
+
+    if(caption!==false){
+        $("#"+caption).on("click", function (e) {
+            e.preventDefault();
+
+            
+            
+            // openPhotoSwipe(index, clickedGallery[0]);
+            
+            
+            var clickedGallery = $(container);
+
+
+            var thumbIndex = -1;
+            clickedGallery.find(".kg-gallery-image").each(function(index) {
+                if ($(this).attr("id") === caption) {
+                    thumbIndex = index;
+                    return false;
+                }
+            });
+
+            console.log(caption);
+            console.log(thumbIndex);
+            console.log(clickedGallery);
+            //var index = 0; // replace 0 with the desired index for the thumbnail
+            openPhotoSwipe(thumbIndex, clickedGallery[thumbIndex]);
+        });
+    }
 
 }
 
