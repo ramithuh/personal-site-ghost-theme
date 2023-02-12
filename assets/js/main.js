@@ -420,7 +420,27 @@ function gallery() {
         var height = image.attributes.height.value;
         var ratio = width / height;
         container.style.flex = ratio + ' 1 0%';
+
+
+        var id = container.id;
+        pswp(
+            '.kg-gallery-container-side',
+            '.kg-gallery-image',
+            '.kg-gallery-image',
+            id,
+            true
+        );
+
     });
+
+    // pswp(
+    //     '.kg-gallery-container-side',
+    //     '.kg-gallery-image',
+    //     '.kg-gallery-image',
+    //     false,
+    //     true
+    // );
+
 
     pswp(
         '.kg-gallery-container',
@@ -469,7 +489,7 @@ function toc() {
                 var linkClass =
                     $(this).prop('tagName') == 'H3'
                         ? 'sticky-toc-link sticky-toc-link-indented'
-                        : 'sticky-toc-link';
+                        : 'sticky-toc-link sticky-toc-link-main';
 
                 var rsc = "";
                 if ($(value).text()=="Resources :"){
@@ -841,6 +861,13 @@ function pswp(container, element, trigger, caption, isGallery) {
     $(container).on('click', trigger, function (e) {
         onThumbnailsClick(e);
     });
+    $("#yo").on("click", function (e) {
+        e.preventDefault();
+        var clickedGallery = $(container);
+        var index = 0; // replace 0 with the desired index for the thumbnail
+        openPhotoSwipe(index, clickedGallery[0]);
+    });
+
 }
 
 $(document).ready(function(){
@@ -849,12 +876,27 @@ $(document).ready(function(){
         var title = $(this).attr("paper-title");
         var show_citation = $(this).attr("paper-citations");
         var element = this;
+        var new_count = "";
 
         $(this).attr("href", "https://scholar.google.com/scholar?q=" + title);
 
+
         if(show_citation=="false"){
             $.getJSON('https://gs-metrics.ramith.workers.dev/?paper_title=' + title, function(data) {
-                $(element).attr("paper-citations",data.count);
+
+                if(parseInt(data.new_count) > 0){
+                    new_count =  "<font color=\"#28a745\"> (+ "+ data.new_count +" new citations)</font>";
+                }
+                
+                $(element).attr("paper-citations",data.count + new_count );
+            });
+
+        }else if (show_citation=="new"){
+            $.getJSON('https://gs-metrics.ramith.workers.dev/?paper_title=' + title, function(data) {
+                if(parseInt(data.new_count) > 0){
+                    new_count =  " (+ "+ data.new_count +" new citations)";
+                }
+                $(element).text(new_count + " · " );
             });
 
         }else{
@@ -864,6 +906,8 @@ $(document).ready(function(){
         }
 
   });
+
+
 });
 
 
@@ -875,25 +919,53 @@ $( "a" ).hover(
             var authors = $(this).attr("paper-authors");
             var conf = $(this).attr("paper-conf");
             var citations = $(this).attr("paper-citations");
+            var slides_pdf = $(this).attr("paper-slides-pdf");
+            var video_url = $(this).attr("paper-video");
             
+            var video="";
+            if(video_url!==undefined){
+                video = '<a class="social-item social-item-youtube" href="' + video_url  +'"><svg class="icon"><use xlink:href="#youtube-box"></use></svg></a>'
+            }
+
             if (typeof title !== 'undefined' && title !== false) {
                 // $('<div/>', {
                 //     text: title,
                 //     class: 'box'
                 // }).appendTo(this); 
-
-                $(this).append('<div class="box">' + 
-                '<ul style="list-style-type: none; padding-left:1em;">'+
-                '<li><strong>'+ title +' </strong>'+
-                ' <u>[PDF]</u><br>'+
-                authors + '<br><i>'+
-                conf + '</i><br>' + 
-                citations +'</li>'+
-                '</ul></div>');
-            }
+                if(title==="text"){
+                    var description = $(this).attr("description");
+    
+                    $(this).append('<div class="box_cover">' + 
+                    '<ul style="list-style-type: none; padding-left:1em;">'+
+                    '<li>'+
+                    description + '<br><i>'+
+                    '</ul></div>');
+                }else if(title==="side_cover"){
+                    console.log("toooo")
+                    var description = $(this).attr("description");
+    
+                    $(this).append('<div class="box_cover" style="max-width:340px !important;min-width:300px !important">' + 
+                    '<ul style="list-style-type: none; padding-left:1em;">'+
+                    '<li>'+
+                    description + '<br><i>'+
+                    '</ul></div>');
+                } else{
+                    $(this).append('<div class="box">' + 
+                    '<ul style="list-style-type: none; padding-left:1em;">'+
+                    '<li><strong>'+ title +' </strong>'+
+                    ' <u>[PDF]</u><br>'+
+                    authors + '<br><i>'+
+                    conf + '</i><br>' + 
+                    citations +'</li>'+ video +
+                    '</ul></div>');
+                }
+            } 
 
         
     }, function() {
       $(document).find("div.box").remove();
+      $(document).find("div.box_cover").remove();
     }
   );
+
+  
