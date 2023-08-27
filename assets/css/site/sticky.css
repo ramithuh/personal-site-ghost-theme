@@ -72,8 +72,8 @@
     padding: 1rem 0;
     width: 250px;
     text-align: left;
-    /* background-color: var(--lighter-gray-color); */
-    background-color: var(--white-color);
+    background-color: var(--lighter-gray-color);
+    /* background-color: var(--white-color); */
     opacity: 0;
     transition-timing-function: var(--animation-base);
     transition-duration: 0.2s;

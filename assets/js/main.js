@@ -266,6 +266,7 @@ function getViewport () {
     }
   }
 
+var tocVisible = false;
 
 function sticky() {
     'use strict';
@@ -275,7 +276,6 @@ function sticky() {
         if (st > lastSt) {
             if (st > titleOffset) {
                 body.addClass('sticky-visible');
-
             }
         } else {
             if (st <= titleOffset) {
@@ -283,13 +283,23 @@ function sticky() {
             }
         }
 
-        if (st > titleOffset && st <  1200) {
+        if (st > titleOffset && st <  2600) {
             if(getViewport() == 'xl'){
                 body.addClass('toc-opened');
+                tocVisible = true;
             }
-        }
-        else{
+        }else if (lastSt - st > 50  && st > 2600) {
+            // Show the table of contents when the user scrolls up from a point deeper than 2600px
+            if(getViewport() == 'xl'){
+                body.addClass('toc-opened');
+                tocVisible = true;
+            }
+        }else if(lastSt - st >=0){
+
+        
+        }else if(lastSt - st < 20 && tocVisible){
             body.removeClass('toc-opened');
+            tocVisible = false;
         }
     }
 
@@ -302,6 +312,44 @@ function sticky() {
 
     lastSt = st;
 }
+
+
+// function sticky() {
+//     'use strict';
+//     st = jQuery(window).scrollTop();
+
+//     if (titleOffset > 0 && contentOffset > 0) {
+//         if (st > lastSt) {
+//             if (st > titleOffset) {
+//                 body.addClass('sticky-visible');
+
+//             }
+//         } else {
+//             if (st <= titleOffset) {
+//                 body.removeClass('sticky-visible');
+//             }
+
+//         }
+
+//         if (st > titleOffset && (st <  2600)) {
+//             if(getViewport() == 'xl'){
+//                 body.addClass('toc-opened');
+//             }
+//         }
+//         else{
+//             body.removeClass('toc-opened');
+//         }
+//     }
+
+//     progress.css(
+//         'transform',
+//         'translate3d(' +
+//             (-100 + Math.min((st * 100) / contentOffset, 100)) +
+//             '%,0,0)'
+//     );
+
+//     lastSt = st;
+// }
 
 function subMenu() {
     'use strict';
@@ -414,6 +462,8 @@ function video() {
 function gallery() {
     'use strict';
     var images = document.querySelectorAll('.kg-gallery-image img');
+
+    console.log(images)
     images.forEach(function (image) {
         var container = image.closest('.kg-gallery-image');
         var width = image.attributes.width.value;
@@ -861,6 +911,8 @@ function pswp(container, element, trigger, caption, isGallery) {
     });
 
     if(caption!==false){
+        console.log("binding function -> ", caption)
+
         $("#"+caption).on("click", function (e) {
             e.preventDefault();
 
@@ -879,6 +931,7 @@ function pswp(container, element, trigger, caption, isGallery) {
                     return false;
                 }
             });
+            //var clickedGallery = $(container).find('#' + caption).parent();
 
             console.log(caption);
             console.log(thumbIndex);
@@ -927,6 +980,25 @@ $(document).ready(function(){
 
   });
 
+  var authors = $("[author-citations]");
+  authors.each(function() {
+        var author_name = $(this).attr("author-name");
+        var show_citation = $(this).attr("author-citations");
+        var element = this;
+
+        $(this).attr("href", "https://scholar.google.com/scholar?q=" + author_name);
+
+        if(show_citation=="false"){
+            $.getJSON('https://gs-authors.ramith.workers.dev/?author=' + author_name, function(data) {
+                $(element).attr("author-citations", data.citations);
+                $(element).attr("author-affiliation", data.affiliation);
+            });
+        }else{
+            $.getJSON('https://gs-authors.ramith.workers.dev/?author=' + author_name, function(data) {
+                $(element).text( " · Cited By " + data.citations + " · " );
+            });
+        }
+  });
 
 });
 
@@ -941,43 +1013,64 @@ $( "a" ).hover(
             var citations = $(this).attr("paper-citations");
             var slides_pdf = $(this).attr("paper-slides-pdf");
             var video_url = $(this).attr("paper-video");
+
+            var author_name = $(this).attr("author-name");
+            var author_affiliation = $(this).attr("author-affiliation");
+            var author_citations = $(this).attr("author-citations");
             
             var video="";
+
             if(video_url!==undefined){
+                /// If the paper has a video for it (slideslive etc.)
                 video = '<a class="social-item social-item-youtube" href="' + video_url  +'"><svg class="icon"><use xlink:href="#youtube-box"></use></svg></a>'
             }
 
-            if (typeof title !== 'undefined' && title !== false) {
-                // $('<div/>', {
-                //     text: title,
-                //     class: 'box'
-                // }).appendTo(this); 
-                if(title==="text"){
-                    var description = $(this).attr("description");
-    
-                    $(this).append('<div class="box_cover">' + 
-                    '<ul style="list-style-type: none; padding-left:1em;">'+
-                    '<li>'+
-                    description + '<br><i>'+
-                    '</ul></div>');
-                }else if(title==="side_cover"){
-                    console.log("toooo")
-                    var description = $(this).attr("description");
-    
-                    $(this).append('<div class="box_cover" style="max-width:340px !important;min-width:300px !important">' + 
-                    '<ul style="list-style-type: none; padding-left:1em;">'+
-                    '<li>'+
-                    description + '<br><i>'+
-                    '</ul></div>');
-                } else{
-                    $(this).append('<div class="box">' + 
-                    '<ul style="list-style-type: none; padding-left:1em;">'+
-                    '<li><strong>'+ title +' </strong>'+
-                    ' <u>[PDF]</u><br>'+
-                    authors + '<br><i>'+
-                    conf + '</i><br>' + 
-                    citations +'</li>'+ video +
-                    '</ul></div>');
+            if(typeof author_name !== 'undefined' && author_name !== false){
+                $(this).append('<div class="box">' + 
+                        '<ul style="list-style-type: none; padding-left:1em;">'+
+                        '<li><strong>'+ author_name +' </strong>'+ '<br>'+
+                         author_affiliation + '<br>' +
+                        'Cited by ' + author_citations +
+                        '</ul></div>');
+                
+            }else{
+                //not an author : checking if a paper
+
+                if (typeof title !== 'undefined' && title !== false) {
+                    // $('<div/>', {
+                    //     text: title,
+                    //     class: 'box'
+                    // }).appendTo(this); 
+                    if(title==="text"){
+                        var description = $(this).attr("description");
+        
+                        $(this).append('<div class="box_cover">' + 
+                        '<ul style="list-style-type: none; padding-left:1em;">'+
+                        '<li>'+
+                        description + '<br><i>'+
+                        '</ul></div>');
+                    }else if(title==="side_cover"){
+                        /// we just want to display a description, nothing else :) 
+
+                        var description = $(this).attr("description");
+        
+                        $(this).append('<div class="box_cover" style="max-width:340px !important;min-width:300px !important">' + 
+                        '<ul style="list-style-type: none; padding-left:1em;">'+
+                        '<li>'+
+                        description + '<br><i>'+
+                        '</ul></div>');
+                    }else{ 
+                        //paper style
+
+                        $(this).append('<div class="box">' + 
+                        '<ul style="list-style-type: none; padding-left:1em;">'+
+                        '<li><strong>'+ title +' </strong>'+
+                        ' <u>[PDF]</u><br>'+
+                        authors + '<br><i>'+
+                        conf + '</i><br>' + 
+                        citations +'</li>'+ video +
+                        '</ul></div>');
+                    }
                 }
             } 
 
