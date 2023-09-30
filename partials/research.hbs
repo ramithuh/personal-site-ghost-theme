@@ -1,0 +1,86 @@
+<section class="featured-wrapper container">
+    <h2 class="featured-title-research">Featured Research Papers</h2>
+    <div class="featured-feed owl">
+        <!-- First Research Paper -->
+        <article class="post-class">
+            <div class="u-placeholder horizontal">
+                <video id="myVideo" class="lazyload u-object-fit" loop muted>
+                    <source src="http://localhost:2368/content/media/2023/07/Elves-Video-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <a href="http://localhost:2368/papers-accepted-to-icml/" target="_blank">
+                <h3 class="post-title">Differentiable Search of Evolutionary Trees from Leaves</h3>
+                <div class="conference-name highlighted">
+                    ICML 2023 Workshops : SODS and DiffAE
+                </div>
+                <div class="paper-year">2023</div> <!-- Added Year -->
+                <div class="authors">
+                    <span class="first-author">R Hettiarachchi,</span> A Swartz, S Ovchinnikov
+                </div>
+                <div class="paper-abstract">
+                    We introduce a differentiable approach to search for phylogenetic trees.
+                    We optimize the tree and ancestral sequences to reduce the total evolutionary steps (parsimony cost).
+                </div>
+            </a>
+        </article>
+
+
+        <!-- Second Research Paper -->
+        <article class="post-class">
+             <div class="u-placeholder horizontal">
+                <img src="http://localhost:2368/content/images/2023/09/AMR.png" alt="Paper Title 2" class="lazyload u-object-fit">
+            </div>
+            <a href="https://www.frontiersin.org/articles/10.3389/fmicb.2023.1154620/full" target="_blank">
+                <h3 class="post-title">Highly sensitive quantitative phase microscopy and deep learning aided with whole genome sequencing for rapid detection of infection and antimicrobial resistance</h3>
+                <div class="conference-name highlighted-bio">
+                    Frontiers in Microbiology
+                </div>
+                <div class="paper-year">2023</div> <!-- Added Year -->
+                <div class="authors">
+                   A. Ahmad, <span class="first-author">R Hettiarachchi,</span> A. Khezri, B. S. Ahluwalia, D. N. Wadduwage, R. Ahmad
+                </div>
+                <div class="paper-abstract">
+
+                    We demonstrate that the complimentary use of label-free optical assay with whole-genome sequencing (WGS) can enable rapid diagnosis of infection and antimicrobial resistance (AMR).
+                </div>
+            </a>
+        </article>
+
+
+         <!-- Third Research Paper -->
+        <article class="post-class">
+             <div class="u-placeholder horizontal">
+                <img src="http://localhost:2368/content/images/2021/02/image-1.png" alt="Paper Title 2" class="lazyload u-object-fit">
+            </div>
+            <a href="http://localhost:2368/paper-accepted-to-iscas2021/" target="_blank">
+                <h3 class="post-title">A Novel Transfer Learning-Based Approach for Screening Pre-existing Heart Diseases Using Synchronized ECG Signals and Heart Sounds</h3>
+                <div class="conference-name highlighted-signal">
+                    IEEE ISCAS
+                </div>
+                <div class="paper-year">2021</div> <!-- Added Year -->
+                <div class="authors">
+                   <span class="first-author">R Hettiarachchi,</span> U. Haputhanthri, K. Herath, H. Kariyawasam, S. Munasinghe, K. Wickramasinghe, D. Samarasinghe, A. De Silva, C. U. S. Edussooriya
+                </div>
+                <div class="paper-abstract">
+
+                    The study introduces a Dual-Convolutional Neural Network approach that utilizes both phonocardiogram (PCG) and electrocardiogram (ECG) data to improve early diagnosis of pre-existing heart diseases.
+                </div>
+            </a>
+        </article>
+        <!-- ... other papers ... -->
+    </div>
+</section>
+<script>
+    const hoverVideo = document.getElementById("myVideo");
+
+    // Add event listener for mouseover (hover)
+    hoverVideo.addEventListener("mouseover", function () {
+        hoverVideo.play();
+    });
+
+    // Add event listener for mouseout
+    hoverVideo.addEventListener("mouseout", function () {
+        hoverVideo.pause();
+    });
+</script>

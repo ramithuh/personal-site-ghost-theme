@@ -14,18 +14,13 @@
         <div class="col-sm-8">
             {{#if @site.description}}
             <div class="cover-description">
-            <p style="font-weight:500">{{@site.description}}, co-advised by <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=LHmeoN4AAAAJ&hl=en" target="_blank">Dr. Dushan Wadduwage</a> and <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=8KJ9gf4AAAAJ&hl=en" target="_blank"> Dr. Sergey Ovchinnikov.</a>
+            <p style="font-weight:500">{{@site.description}},<br> co-advised by <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=LHmeoN4AAAAJ&hl=en" target="_blank">Dr. Dushan Wadduwage</a> and <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=8KJ9gf4AAAAJ&hl=en" target="_blank"> Dr. Sergey Ovchinnikov.</a>
              <br> I completed my bachelor's degree from University of Moratuwa, Sri Lanka 🇱🇰<br><br>
-              &#10077;&nbsp; I'm passionate towards using <b>Machine Learning for Scientific Advancements (especially towards healthcare)</b> while making sure these models are <b>Robust, Interpretable and Equitable$^{\star}$ &#10078;</b>. 
+              &#10077;&nbsp; I'm interested in <b>Developing Algorithms and fusing insights from Machine Learning to advance Biology,</b> while keeping in mind that our approaches should strive to be <b>Robust, Interpretable and Equitable$^\ddagger$ &#10078;</b>. 
 
             </p>
 
-            <p style="margin-top:-1em;">
-             
-              $^{\star}$For the most part, I <a class="link_bio tooltip_cover" paper-title="text" description="While being an undergrad, during the pandemic, I led the project of creating a virtual career fair platform for my university in Sri Lanka that connected 900+ students and 70+ companies. I co-developed an algorithm that would bring students fair opportunities to meet their employer and schedule their interviews. <br><br> In this process, I learned first hand ethical and humane considerations that need to be factored into writing an algorithm to match companies to students. If we give the flexibility to a company to select undergraduates, they will select the best according to a limited number of criteria which may not be equitable leaving some undergraduates without an opportunity to even have a mock interview. So, there were a lot of aspects to think about when building fair and equitable programs. I had never experienced how an algorithm I write could affect thousands of people, and taught me about our responsibility to look at the broader impact.
-">discovered</a> 
-              this interest of mine through my volunteering efforts at Rotaract.  <br>
-            </p>
+           
             </p>
             {{!-- <p>This is my experimental version of the new personal website.
               I needed a space to centralize the content I post through various blogging platforms such as medium, svbtle and my own <a href="https://blog.ramith.fyi">blog</a>.
@@ -34,10 +29,12 @@
             <p id="orgs-list" style="font-weight:500">
                  I started this blog when I was learning Signals and Systems back in <a class="link_bio" href="https://ramith.fyi/does-a-laplace-transform-exist-for-sin-t/" target="_blank">2018</a>, and through this blog, I aspire to clearly write (+ develop visualizations)$^\dagger$ about concepts
                   & advancements that <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">awe</span> me. 
-                  Occasionally I record piano covers and try to sing songs. You can find them <a class="link_bio" href="https://www.youtube.com/RamithHettiarachchi" target="_blank">here.</a> 🎹
-                  <br><font size="2"> &nbsp; &nbsp;&nbsp; $^\dagger$Inspired by Distill.pub</font> 
+                  <br>Occasionally I record piano covers and try to sing songs. You can find them <a class="link_bio" href="https://www.youtube.com/RamithHettiarachchi" target="_blank">here.</a> 🎹
+                  <br>
                   <br><br> <font color="red">I'm looking for PhD opportunities for Fall 2024.</font>
-                  
+                  <br>
+                 <font size="2"><span><b>Research Interests:</b></span><span class="research-interest bio">Computational Biology</span>,<span class="research-interest bio">Protein Evolution</span>,<span class="research-interest bio">Interpretable ML Models for Biology</span><br><span class="research-interest">Differentiable Algorithms</span>,<span class="research-interest">Combinatorial Optimization</span>,<span class="research-interest">Graph Theory</span>
+                  </font>
             <div class="u-text-format2">
               <p style="text-align:center">
                 <a target="_blank" href="mailto:ramithhettiarachchi@fas.harvard.edu">Email</a> &nbsp;/&nbsp;
@@ -142,6 +139,17 @@
                       </a>
                     </div>
                 </div>
+                {{!-- <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2"><b>Cohere For AI</b><sup>﹡</sup>
+                          <br>
+                          June 2023 - Present
+                      </p>
+                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://cohere.for.ai/">
+                        <img id="cohere" src="/assets/images/orgs/cohere.png">
+                      </a>
+                    </div>
+                </div> --}}
 
                 <!--<div class="level-item has-text-centered">
                     <div>
@@ -183,17 +191,7 @@
                     </div>
                 </div>
 
-                {{!-- <div class="level-item has-text-centered">
-                    <div>
-                      <p class="heading pb-2"><b>Cohere For AI</b><sup>﹡</sup>
-                          <br>
-                          June 2023 - Present
-                      </p>
-                      <a class="image is-96x96 text-decoration-none" target="_blank" href="https://cohere.for.ai/">
-                        <img id="SPS" src="/assets/images/orgs/cohere.png">
-                      </a>
-                    </div>
-                </div> --}}
+
 
                 {{!-- <div class="level-item has-text-centered">
                     <div>
@@ -224,5 +222,14 @@
             </div>
 
             </div>
-           <div style="text-align: right;margin-right: 50px;"><p class="footnote pb-3"><sup>﹡</sup> Volunteering</p></div>
+           <div style="text-align: right;margin-right: 50px; margin-top:-20px">
+            
+            <p class="footnote pb-3"><sup>﹡</sup> Volunteering</p>
+             <p class="footnote pb-3"><sup>$\dagger$</sup> Inspired by Distill.pub</p>
+           {{!-- <font size="2"> &nbsp; &nbsp;&nbsp; $^\dagger$Inspired by Distill.pub</font>  --}}
+           <p class="footnote pb-3">
+             
+              $^\ddagger$For the most part, I discovered this interest through volunteering efforts at Rotaract.  <br>
+            </p>
+           </div>
         </section>

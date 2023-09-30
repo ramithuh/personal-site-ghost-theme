@@ -1,7 +1,7 @@
 <div class="modal-overlay">
     <div class="modal modal-search">
         <div class="form-wrapper">
-            <input class="modal-input search-input" type="search" placeholder="Enter keyword...">
+            {{!-- <input class="modal-input search-input" type="search" placeholder="Enter keyword...">
             <button class="form-button search-button" aria-label="Search">
                 <svg class="icon icon-search">
                     <use xlink:href="#magnify"></use>
@@ -9,7 +9,7 @@
                 <svg class="icon icon-close">
                     <use xlink:href="#window-close"></use>
                 </svg>
-            </button>
+            </button> --}}
         </div>
         {{#get "tags" limit="5" include="count.posts" order="count.posts desc"}}
             {{#if tags}}

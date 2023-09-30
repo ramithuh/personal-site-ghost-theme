@@ -22,3 +22,25 @@
     text-transform: uppercase;
     
 }
+
+.featured-title-blog {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray-color);
+    color: var(--brand-color);
+    font-size: 2.0rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.featured-title-research {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray-color);
+    color: var(--brand-color);
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    /* text-align: center; */
+    
+}

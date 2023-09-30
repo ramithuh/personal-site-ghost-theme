@@ -463,7 +463,7 @@ function gallery() {
     'use strict';
     var images = document.querySelectorAll('.kg-gallery-image img');
 
-    console.log(images)
+    // console.log(images)
     images.forEach(function (image) {
         var container = image.closest('.kg-gallery-image');
         var width = image.attributes.width.value;
@@ -476,7 +476,7 @@ function gallery() {
 
 
         if(id!==""){
-            console.log(id)
+            // console.log(id)
             pswp(
                 '.kg-gallery-container-side',
                 '.kg-gallery-image',
@@ -1080,5 +1080,3 @@ $( "a" ).hover(
       $(document).find("div.box_cover").remove();
     }
   );
-
-  

@@ -13,7 +13,7 @@ $.getJSON('https://kudos.ramith.workers.dev/?read=1&blog_post=' + Url , function
 
 
 
-console.log('https://kudos.ramith.workers.dev/?read=1&blog_post=' + Url);
+// console.log('https://kudos.ramith.workers.dev/?read=1&blog_post=' + Url);
 
 $(function()
 {
@@ -55,7 +55,7 @@ $(function()
         $.getJSON('https://kudos.ramith.workers.dev/?read=0&blog_post=' + Url, function(data) {
             $(".num").html(data.count);
         });
-        console.log("Kodo'd:", element.data('id'), ":)");
+        // console.log("Kodo'd:", element.data('id'), ":)");
         // set cookie so user cannot kudo again for 7 days
         $.cookie(postId, 'true', { expires: 7 });
     });
@@ -65,7 +65,7 @@ $(function()
     {
         var element = $(this);
         // ajax'y stuff or whatever you want
-        console.log("Un-Kudo'd:", element.data('id'), ":(");
+        // console.log("Un-Kudo'd:", element.data('id'), ":(");
 
         // remove cookie
         $.removeCookie(postId);
