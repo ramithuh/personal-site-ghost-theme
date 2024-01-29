@@ -4,11 +4,16 @@ routes:
   /signin/: members/signin
   /account/: members/account
   /upgrade/: members/upgrade
+  /news/ : news
 
 collections:
   /:
     permalink: /{slug}/
     template: index
+  /rejections/:
+    permalink: /rejections/{slug}/
+    template: rejections
+    filter: tag:rejections
 
 taxonomies:
   tag: /tag/{slug}/

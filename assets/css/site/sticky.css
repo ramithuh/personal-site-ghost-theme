@@ -26,6 +26,7 @@
     z-index: 90;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
     align-items: center;
     margin-top: 50px;
     background-color: rgba(255, 255, 255, 0.85);
@@ -33,10 +34,14 @@
     transform: translateY(-52px);
     -webkit-backdrop-filter: saturate(130%) blur(20px);
     backdrop-filter: saturate(130%) blur(8px);
-    box-shadow: 0 28px 28px rgba(102, 102, 102, 0.1);
+    /* box-shadow: 0 28px 28px rgba(102, 102, 102, 0.1); */
+    /* box-shadow:  -4px 3px 28px hsla(0, 0%, 40%, 0.1); */
+    box-shadow: -4px 3px 28px hsla(0, 0%, 23.5%, 0.1);
 }
 .rheader{
-    box-shadow: 0 28px 28px rgba(102, 102, 102, 0.1);
+    /* box-shadow: 0 28px 28px rgba(102, 102, 102, 0.1); */
+    /* box-shadow:  -4px 3px 28px hsla(0, 0%, 40%, 0.1); */
+    box-shadow: -4px 3px 28px hsla(0, 0%, 23.5%, 0.1);
 }
 
 .sticky-title {

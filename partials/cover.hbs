@@ -5,18 +5,35 @@
             <div class="cover-icon">
               <br>
               <h3 style="font-weight:600" >Hey! I'm Ramith 😃</h3>
-              <img class="cover-icon-image" src="{{asset 'images/ramith_winter.jpeg'}}" alt="Ramith, smiling and waving at the camera">
+              <img class="cover-icon-image" src="{{asset 'images/ramith_winter.jpg'}}" alt="Ramith, smiling and waving at the camera">
                 <br>
-                <p ><i><a href="https://thoughts.ramith.fyi/Maybe-so-Maybe-not-We-ll-see-1c2df7b15cd84ea296b6e7d6e58111c0">"Maybe so, maybe not, we'll see.."</a></a></i></p>
+               <p ><i><a href="https://thoughts.ramith.fyi/Maybe-so-Maybe-not-We-ll-see-1c2df7b15cd84ea296b6e7d6e58111c0">"Maybe so, maybe not, we'll see.."</a></a></i></p>
                 <!--<img class="cover-icon-image-hover" src="{{asset 'images/ramith_winter.jpeg'}}" alt="{{@site.title}}">-->
+
+                          <div class="u-text-format2">
+              <p style="text-align:center">
+                <a target="_blank" href="mailto:ramith@mit.edu">Email</a> &nbsp;/&nbsp;
+                <a target="_blank" href="assets/pdf/Ramith_CV_public.pdf">CV</a> &nbsp;/&nbsp;
+                <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=NjG1z50AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
+                {{!-- <a target="_blank" href="https://twitter.com/ramith__">Twitter</a> &nbsp;/&nbsp; --}}
+                {{!-- <a href="#viz">Other</a> &nbsp;/&nbsp; --}}
+                <a target="_blank" href="https://github.com/ramithuh">Github</a>
+              </p>
+
+              
+            </div>
+
             </div>
         </div>
         <div class="col-sm-8">
             {{#if @site.description}}
             <div class="cover-description">
-            <p style="font-weight:500">{{@site.description}},<br> co-advised by <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=LHmeoN4AAAAJ&hl=en" target="_blank">Dr. Dushan Wadduwage</a> and <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=8KJ9gf4AAAAJ&hl=en" target="_blank"> Dr. Sergey Ovchinnikov.</a>
-             <br> I completed my bachelor's degree from University of Moratuwa, Sri Lanka 🇱🇰<br><br>
-              &#10077;&nbsp; I'm interested in <b>Developing Algorithms and fusing insights from Machine Learning to advance Biology,</b> while keeping in mind that our approaches should strive to be <b>Robust, Interpretable and Equitable$^\ddagger$ &#10078;</b>. 
+            <p style="font-weight:500">{{@site.description}} working at <a class="link_bio tooltip_cover" href="https://solab.org" target="_blank">SoLab</a>. <br> I've been engaging in computational biology and imaging research with the guidance of <br><a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=LHmeoN4AAAAJ&hl=en" target="_blank">Dr. Dushan Wadduwage</a> and <a class="link_bio tooltip_cover" href="https://scholar.google.com/citations?user=8KJ9gf4AAAAJ&hl=en" target="_blank">Dr. Sergey Ovchinnikov</a>.
+            
+             {{!-- <br> I completed my bachelor's degree from University of Moratuwa, Sri Lanka 🇱🇰--}}
+
+             <br><br> 
+              &#10077;&nbsp; I'm interested in <b>developing algorithms and fusing insights from Machine Learning (ML) to advance Biology & Healthcare,</b> while striving for <b>Robustness and Interpretability &#10078;</b> 
 
             </p>
 
@@ -27,47 +44,23 @@
               This website accomplishes just that!
             </p> --}}
             <p id="orgs-list" style="font-weight:500">
-                 I started this blog when I was learning Signals and Systems back in <a class="link_bio" href="https://ramith.fyi/does-a-laplace-transform-exist-for-sin-t/" target="_blank">2018</a>, and through this blog, I aspire to clearly write (+ develop visualizations)$^\dagger$ about concepts
+                 I started this blog when I was <a class="link_bio" href="https://ramith.fyi/does-a-laplace-transform-exist-for-sin-t/" target="_blank">learning Signals and Systems</a>, and through this blog, <br> I aspire to clearly write (+ develop visualizations)$^\dagger$ about concepts
                   & advancements that <span style="color: #6b76ff;-webkit-background-clip: text!important;-webkit-text-fill-color: transparent;background-clip: text!important;background: #3b48f6;background: -webkit-gradient(left top,right bottom,color-stop(0,#3b48f6),color-stop(0,#3b48f6),color-stop(100%,#14b2fa));background: linear-gradient(135deg,#3b48f6,#3b48f6 30%,#14b2fa);">awe</span> me. 
                   <br>Occasionally I record piano covers and try to sing songs. You can find them <a class="link_bio" href="https://www.youtube.com/RamithHettiarachchi" target="_blank">here.</a> 🎹
+                  <br><br>
+                  <font color="red">I'm looking for PhD opportunities for Fall 2024.</font><br>
                   <br>
-                  <br><br> <font color="red">I'm looking for PhD opportunities for Fall 2024.</font>
-                  <br>
-                 <font size="2"><span><b>Research Interests:</b></span><span class="research-interest bio">Computational Biology</span>,<span class="research-interest bio">Protein Evolution</span>,<span class="research-interest bio">Interpretable ML Models for Biology</span><br><span class="research-interest">Differentiable Algorithms</span>,<span class="research-interest">Combinatorial Optimization</span>,<span class="research-interest">Graph Theory</span>
+                 <font size="2"><span><b>Research Interests:</b></span><span class="research-interest bio">Computational Biology</span>,<span class="research-interest bio">Interpretable ML Models for Biology</span>, <span class="research-interest bio">ML For Science</span><br>
+                  <span class="research-interest imaging">Multi-modal Learning (Genomics+Imaging)</span> <br>
+                  
+                  <span  id="news"><b>Research Directions:</b></span><span class="research-interest">Differentiable Algorithms</span>, <span class="research-interest">Combinatorial Optimization</span>,<span class="research-interest">Graph Theory/Representation Learning</span><br><span class="research-interest">Uncertainty Quantification</span>
                   </font>
-            <div class="u-text-format2">
-              <p style="text-align:center">
-                <a target="_blank" href="mailto:ramithhettiarachchi@fas.harvard.edu">Email</a> &nbsp;/&nbsp;
-                <a target="_blank" href="assets/pdf/Ramith_CV_public.pdf">CV</a> &nbsp;/&nbsp;
-                <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=NjG1z50AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp;/&nbsp;
-                <a target="_blank" href="https://twitter.com/ramith__">Twitter</a> &nbsp;/&nbsp;
-                <a href="#viz">Visualizations</a> &nbsp;/&nbsp;
-                <a target="_blank" href="https://github.com/ramithuh">Github</a>
-              </p>
 
-              
-            </div>
 
             </div>
             {{/if}}
-            <hr>
-          
-           
+            {{!-- <hr> --}}
 
-            <div class="container" >
-            <!--<div class="org-text">
-            <p align="left"><u>Here are some organizations I am/was affiliated with,</u></p></div>-->
-
-        </div>
-        
-            <!--
-            <br>
-            <div class="level">
-
-
-            </div>
-            -->
-            
 
             
 
@@ -100,8 +93,8 @@
                         <img src="/assets/images/orgs/uom.png">
                       </a>
                     </div>
-                </div>
-                                  <div class="level-item has-text-centered">
+                </div>                
+                <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2">
                         <b>Harvard University</b><br>
@@ -109,6 +102,18 @@
                       </p>
                       <a class="image is-96x144 text-decoration-none" target="_blank" href="https://www.harvard.edu/">
                         <img id="HARVARD" src="/assets/images/orgs/harvard.png">
+                      </a>
+                    </div>
+                </div>
+
+                <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading pb-2">
+                        <b>MIT</b><br>
+                          Jan 2024 - Present
+                      </p>
+                      <a class="image is-96x144 text-decoration-none" target="_blank" href="https://biology.mit.edu/">
+                        <img id="MIT" src="/assets/images/orgs/mit.png">
                       </a>
                     </div>
                 </div>
@@ -126,7 +131,7 @@
 
             
 
-                <div class="level-item has-text-centered">
+                {{!-- <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2"><b>the A.I. Team</b>
                           <br>
@@ -138,18 +143,20 @@
                         
                       </a>
                     </div>
-                </div>
-                {{!-- <div class="level-item has-text-centered">
+                </div> --}}
+                <div class="level-item has-text-centered" style="margin-left: 170px;">
                     <div>
-                      <p class="heading pb-2"><b>Cohere For AI</b><sup>﹡</sup>
+                      <p class="heading pb-2"><b>Project Aya</b><sup>﹡</sup>
                           <br>
                           June 2023 - Present
                       </p>
                       <a class="image is-96x96 text-decoration-none" target="_blank" href="https://cohere.for.ai/">
-                        <img id="cohere" src="/assets/images/orgs/cohere.png">
+                        <img id="cohere" src="/assets/images/orgs/Aya.png">
                       </a>
+                       {{!-- <p class="heading pb-2">(Project Aya)
+                      </p> --}}
                     </div>
-                </div> --}}
+                </div>
 
                 <!--<div class="level-item has-text-centered">
                     <div>
@@ -167,7 +174,7 @@
 
 
 
-                <div class="level-item has-text-centered">
+                {{!-- <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2">
                         <b>Rotaract Mora</b><sup>﹡</sup><br>
@@ -177,9 +184,9 @@
                         <img src="/assets/images/orgs/rotaractmora.png">
                       </a>
                     </div>
-                </div>
+                </div>  --}}
 
-                <div class="level-item has-text-centered">
+                {{!-- <div class="level-item has-text-centered">
                     <div>
                       <p class="heading pb-2"><b>SPS Student Branch</b><sup>﹡</sup>
                           <br>
@@ -189,7 +196,7 @@
                         <img id="SPS" src="/assets/images/orgs/sps.png">
                       </a>
                     </div>
-                </div>
+                </div> --}}
 
 
 
@@ -227,9 +234,9 @@
             <p class="footnote pb-3"><sup>﹡</sup> Volunteering</p>
              <p class="footnote pb-3"><sup>$\dagger$</sup> Inspired by Distill.pub</p>
            {{!-- <font size="2"> &nbsp; &nbsp;&nbsp; $^\dagger$Inspired by Distill.pub</font>  --}}
-           <p class="footnote pb-3">
+           {{!-- <p class="footnote pb-3">
              
               $^\ddagger$For the most part, I discovered this interest through volunteering efforts at Rotaract.  <br>
-            </p>
+            </p> --}}
            </div>
         </section>

@@ -81,7 +81,7 @@
              
                     <div class="sl" onclick="showNotice();">Undergrad from Sri Lanka?</div>
                     <div id="sl-hidden">
-                    <p style="line-height:1em;"><font size=2 color="grey"><br>I allocate ~1.5 hours per week to have 1:1 sessions with undergrads who wants any advice/guidance. If you are such an undergrad, you can schedule a time <a class="link_bio" href="https://events.ramith.fyi/discussion" target="_blank">here.</a> <br> <font color="red">After scheduling, pls add it to your calendar.</font> There were some occasions when the person did not show up. Keep in mind that another person could also benefit from the slot you pick right now. 😄</font></p>
+                    <p style="line-height:1em;"><font size=2 color="grey"><br>I allocate ~1.5 hours per week to have 1:1 sessions with undergrads who wants any advice/guidance. If you are such an undergrad, you can schedule a time <a class="link_bio" href="https://events.ramith.fyi/discussion" target="_blank">here.</a> <br> <font color="red">After scheduling, pls add it to your calendar.</font> If the link doesn't seem to work, please try in incognito mode.</font></p>
                         </div>
                         
           
@@ -114,18 +114,71 @@
             {{#is "awards"}}
             {{else}}
             
-           
+           <div id="viz"></div>
         <br>
         <hr>
         <br>
 
         <br>
 
-        
-        <div class="section-science" id="science">
+    
+
+                <div class="section-science">
 	        <div class="container-home container-science">
      
-		    <div class="title" id="viz">Some Visualization Tools I've built</div>
+		    <div class="title">Some things I care about (or used to do) during my free time...</div>
+
+		
+            <div class="row">
+
+                
+                <div class="cover-wrapper">
+                    <a target="_blank" href="https://www.linkedin.com/posts/ramithhettiarachchi_project-aya-sinhala-contributions-activity-7111836002159050752-30T8?utm_source=share&utm_medium=member_desktop">
+                        <div class="cover-cell cover-standard cover-aya" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1) 0s;">
+                            <div class="cover-inner">
+                                <div class="cover-title large text-center">Project Aya</div>
+                                <div class="cover-author text-center">Open Science Effort to Accelerate Multilingual AI </div>
+                                <div class="cover-bottom">
+                                    <img src="{{asset 'images/tiles/aya.png'}}" width="30px">
+                                </div>
+                            </div>
+                        <div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 460px; height: 460px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0; transition: opacity 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;"></div></div><div class="js-tilt-glare"><div class="js-tilt-glare-inner"></div></div></div>
+                    </a>
+                    <div class="cover-details">
+                        <h4 class="typo">Project Aya - Sinhala/සිංහල</h4>
+                        <div class="details">
+                        Working alongside likeminded Sinhala speaking individuals who'd love to see our language thrive in the current NLP advancement landscape. <br>(2023 - Present)
+                        </div>
+                    </div>
+                </div>
+   
+                    <div class="cover-wrapper">
+                    <a target="_blank" href="https://manusathhanda.rotaractmora.org">
+                        <div class="cover-cell cover-standard cover-manusath" data-tilt="" style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1) 0s;">
+                            <div class="cover-inner">
+                                <div class="cover-title large text-center">Audiobook library</div>
+                                <div class="cover-author text-center"></div>
+                                <div class="cover-bottom">
+                                    <img src="{{asset 'images/tiles/manusath.png'}}" width="30px">
+                                </div>
+                            </div>
+                        <div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 460px; height: 460px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0; transition: opacity 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;"></div></div><div class="js-tilt-glare"><div class="js-tilt-glare-inner"></div></div></div>
+                    </a>
+                    <div class="cover-details">
+                        <h4 class="typo">Manusath Handa</h4>
+                        <div class="details">
+                        We built on online platform to gather and disseminate audiobooks (Sinhala/Tamil) to visually impaired students. <br> (Contributed while I was an Undergrad).
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        </div>
+        </div>
+
+           <div class="section-science" id="science">
+	        <div class="container-home container-science">
+     
+		    <div class="title">Some Visualization Tools I've built</div>
 
 		
             <div class="row">
@@ -190,7 +243,7 @@
                 </div>
             </div>
 	        </div>
-        </div>
+        </div> 
              {{/is}}
         {{/is}}
          {{/is}}

@@ -217,3 +217,9 @@ body.home .section-science {
   body.home .cover-cell.cover-distilbert {
 	background-image: linear-gradient(112deg, #FF2020 0%, #F22E70 100%);
   }
+  body.home .cover-cell.cover-aya {
+	background-image: linear-gradient(112deg, rgb(19, 113, 253) 0%, #526CDD 100%);
+  }
+  body.home .cover-cell.cover-manusath {
+	background-image: linear-gradient(112deg, #ff0037, #c33b59 100%);
+  }

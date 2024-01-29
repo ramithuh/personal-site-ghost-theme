@@ -5,7 +5,7 @@
         <div class="post-feed container medium">
 
     
-            {{#get "posts" limit="5"  filter="tag:-[news]+tag:-[rejections]+featured:false"}}
+            {{#get "posts" filter="tag:-[news]+tag:-[rejections,un]"}}
                 {{#foreach posts}}
                     {{!-- {{^has tag="news"}}
                         {{^has tag="rejections"}} --}}
